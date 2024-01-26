@@ -1,0 +1,34 @@
+﻿title: Start
+tags:
+---
+???: Hello!
+???: Your journey is about to begin.
+???: It's also about to end.
+???: Very short journey we've got here.
+???: So let's make it a good one, yeah?
+	-> Yeah!
+		<<jump Yeah>>
+	-> Hey how does yarn work?
+		<<jump Question>>
+===
+
+
+title: Question
+tags:
+---
+???: Kind of the same as before? Projects don't get assigned scripts anymore, they just automatically know every node in every script in the same folder.
+???: So we might need to break up dialogues by folder, or at least not re-use node names.
+???: The scripts look a bit different too but it's fine.
+???: Should be no problem.
+	
+===
+
+title: Yeah
+tags:
+---
+???: Yeah!
+	-> Yeah!
+		<<jump Yeah>>
+	-> Hey how does yarn work?
+		<<jump Question>>
+===
