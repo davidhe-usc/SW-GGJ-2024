@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/YarnTest.unity
+    guid: d46e5a2c475a64644abc5dfc7e661a0a
+  - enabled: 1
+    path: Assets/Scenes/Minigames/TestGame1.unity
+    guid: 732b5892889cdfd4ea29e426df1613d0
+  - enabled: 1
+    path: Assets/Scenes/Minigames/TestGame2.unity
+    guid: 01d99b1927a8468438245d7aadfa9235
+  - enabled: 1
+    path: Assets/Scenes/Minigames/TestGame3.unity
+    guid: 308a496eca60fd94790933d974bbb4b7
   m_configObjects: {}

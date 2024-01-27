@@ -10,6 +10,8 @@ tags:
 		<<jump Yeah>>
 	-> Hey how does yarn work?
 		<<jump Question>>
+	-> Proceed to minigame testing.
+		<<jump MiniTest>>
 ===
 
 
@@ -31,4 +33,17 @@ tags:
 		<<jump Yeah>>
 	-> Hey how does yarn work?
 		<<jump Question>>
+===
+
+title: MiniTest
+tags:
+---
+???: Welcome to minigame testing. You want to load test 1, 2 or 3?
+	-> Test 1 please.
+		<<load_minigame testGame1>>
+	-> Test 2 sounds good.
+		<<load_minigame testGame2>>
+	-> How about test 3?
+		<<load_minigame testGame3>>
+
 ===
