@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &33919125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,7 +289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &352909902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,8 +520,9 @@ GameObject:
   - component: {fileID: 1089113036}
   - component: {fileID: 1089113035}
   - component: {fileID: 1089113034}
+  - component: {fileID: 1089113037}
   m_Layer: 0
-  m_Name: WhiteNoise
+  m_Name: MusicTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,10 +540,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e21e23705694ca4a90497581543a7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 37720b8737d3460428ea41c0f88db4f7, type: 2}
-  cue: {fileID: 11400000, guid: 92229360d4e5e784ca47461ca6b9fe51, type: 2}
-  playOnAwake: 2
-  startOnRandomTime: 1
+  config: {fileID: 11400000, guid: 7613eef1f17160a48a7fa6e774ffded0, type: 2}
+  cue: {fileID: 11400000, guid: 23db5745700513b4f8ddaab95db46a78, type: 2}
+  playOnAwake: 1
+  startOnRandomTime: 0
 --- !u!82 &1089113035
 AudioSource:
   m_ObjectHideFlags: 0
@@ -654,6 +655,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1089113037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089113033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3e8bedef06ffb4fbff33daac0b79a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 1089113035}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -127,6 +127,21 @@ public static class AudioUtility
 		audioSourceOut.Stop();
 		yield break;
 	}
+
+	public static IEnumerator AudioSourcePitchSlide(AudioSource audioSource, float duration, float pitchIncrement)
+	{
+		float currentTime = 0;
+		float startPitch = audioSource.pitch;
+		float targetPitch = startPitch + pitchIncrement;
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            audioSource.pitch = Mathf.Lerp(startPitch, targetPitch, currentTime / duration);
+            yield return null;
+        }
+        yield break;
+    }
     #endregion
 
     #region Play One Shots
