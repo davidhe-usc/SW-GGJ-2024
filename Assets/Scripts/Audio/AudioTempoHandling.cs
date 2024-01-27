@@ -37,7 +37,7 @@ public class AudioTempoHandling : MonoBehaviour
     
     public void ChangeAudioTempo(float tempoIncrement)
     {
-        int tempoDivider = 20;
+        int tempoDivider = 25;
         float pitchIncrement = tempoIncrement / tempoDivider;
         StartCoroutine(AudioUtility.AudioSourcePitchSlide(musicSource, pitchSlideDuration, pitchIncrement));
 

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class AmbienceManager : MonoBehaviour
 {
-    [SerializeField] private AudioPlayCue ambA, ambB, ambC;
+    [SerializeField] private AudioPlayCue ambA, ambB, ambC, ambD;
 
     private int tempoThresholdB = 3;
-    private int tempoThresholdC = 4;
+    private int tempoThresholdC = 6;
+    private int tempoThresholdD = 9;
 
     public static AmbienceManager instance;
 
@@ -38,11 +39,15 @@ public class AmbienceManager : MonoBehaviour
 
     public void CheckAmbienceIntensity (int tempo)
     {
+        if (tempo >= tempoThresholdD)
+            ambD.Play(true);
+        else
+            ambD.Stop(true);
+
         if (tempo >= tempoThresholdC)
             ambC.Play(true);
         else
             ambC.Stop(true);
-
 
         if (tempo >= tempoThresholdB)
             ambB.Play(true);
