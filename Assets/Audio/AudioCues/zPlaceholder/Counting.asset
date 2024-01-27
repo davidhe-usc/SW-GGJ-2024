@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb9438caeba78b74da22577979579999, type: 3}
+  m_Name: Counting
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 87012e6aaaecc104dac6aa04145c7339, type: 3}
+  - {fileID: 8300000, guid: 711f0af6020264245bf252a603b335fa, type: 3}
+  - {fileID: 8300000, guid: 48e237326b36a254f846c6ac86d710f4, type: 3}
+  - {fileID: 8300000, guid: febb7d8c6e553d447b56b14caf67b360, type: 3}
+  - {fileID: 8300000, guid: 94195c01e9d74dd4ab73e4c26cb9f5bf, type: 3}
+  - {fileID: 8300000, guid: be2a3c3dcdc0b6848bf82813bc3ef494, type: 3}
+  - {fileID: 8300000, guid: 149d34b39a1420248bb7192c2df7e907, type: 3}
+  - {fileID: 8300000, guid: 7ea3544cc5ea6b346997592f4b586de6, type: 3}
+  - {fileID: 8300000, guid: 592b441966342994c89a0c84538c2df6, type: 3}
+  - {fileID: 8300000, guid: dd909710b5157e545bccb821ae9fa790, type: 3}
+  loop: 0
+  Volume: 0.55
+  Pitch: 1
+  sequenceMode: 1
+  NegativePitchVariation: -0.384
+  PositivePitchVariation: 0.422
+  NegativeVolumeVariation: -0.101
+  PositiveVolumeVariation: 0.163
+  lastIndex: 7
+  nextIndex: 7
+  fadeInTime: 1
+  fadeOutTime: 0
+  reverbTailLength: 0
+  barLength: 0
+  bpm: 0
+  timeSigUpper: 0
+  timeSigLower: 0
