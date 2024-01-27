@@ -12,8 +12,19 @@ tags:
 		<<jump Question>>
 	-> Proceed to minigame testing.
 		<<jump MiniTest>>
+	-> Let's do a question test.
+		<<jump QuestionTest>>
 ===
 
+title: SpeedStart
+tags:
+---
+???: Hello!
+	-> Proceed to minigame testing.
+		<<jump MiniTest>>
+	-> Let's do a question test.
+		<<jump QuestionTest>>
+===
 
 title: Question
 tags:
@@ -40,10 +51,51 @@ tags:
 ---
 ???: Welcome to minigame testing. You want to load test 1, 2 or 3?
 	-> Test 1 please.
-		<<load_minigame testGame1>>
+		<<load_minigame TestGame1>>
 	-> Test 2 sounds good.
-		<<load_minigame testGame2>>
+		<<load_minigame TestGame2>>
 	-> How about test 3?
-		<<load_minigame testGame3>>
+		<<load_minigame TestGame3>>
 
+===
+
+title: QuestionTest
+tags:
+---
+???: You got it. *Ahem*.
+???: 'How do you feel about placeholder text?'
+<<question TempoManager placeholder>>
+===
+
+title: MehResponse
+tags:
+---
+???: 'Really? Ok. Fine.'
+???: Neutral response. Tempo increased a little.
+???: Go again?
+	-> Yeah.
+		<<question TempoManager placeholder>>
+	-> No thanks.
+===
+
+title: BadResponse
+tags:
+---
+???: 'Revolting. You truly are a clown in every sense of the word.'
+???: Bad response. Tempo increased a lot.
+???: Go again?
+	-> Yeah.
+		<<question TempoManager placeholder>>
+	-> No thanks.
+===
+
+title: GenuineResponse
+tags:
+---
+???: 'I see'
+???: Genuine response. Tempo decreased a little.
+???: Go again?
+	-> Yeah.
+		<<question TempoManager placeholder>>
+	-> No thanks.
 ===
