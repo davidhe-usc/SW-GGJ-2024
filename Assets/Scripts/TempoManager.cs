@@ -11,7 +11,7 @@ public class TempoManager : MonoBehaviour
 
     private Question activeQuestion;
 
-    private float tempo = 2f;
+    public static float tempo = 2f;
     private int genuineAnswers = 0;
 
     public GameObject questionPrefab;
@@ -20,9 +20,21 @@ public class TempoManager : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        TempoManager[] tms = FindObjectsOfType<TempoManager>();
+
+        if (tms.Length > 1)
+        {
+            Destroy(this.gameObject);
+        }
+
+        DontDestroyOnLoad(this.gameObject);
         instance = this;
+    }
+
+    private void Start()
+    {
         dialogueRunner = FindObjectOfType<DialogueRunner>();
     }
 
@@ -30,11 +42,6 @@ public class TempoManager : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public float GetTempo()
-    {
-        return tempo;
     }
 
     public void ReceiveAnswer(int type)
@@ -76,7 +83,7 @@ public class TempoManager : MonoBehaviour
     {
         //To do: set up a system to organize questions and decide which one is created. For now they're placeholders.
         activeQuestion = Instantiate(questionPrefab, canvas.transform).GetComponent<Question>();
-        activeQuestion.transform.localPosition = new Vector3(0, -125f, 0);
+        activeQuestion.transform.localPosition = new Vector3(0, -50f, 0);
         string[] texts = { "It's not my thing.", "It's a waste of time", "What's that?", "Can we placehold hands?"};
         int[] types = { 1, -2, -1, -2 };
         activeQuestion.SetAnswerText(texts, types);
