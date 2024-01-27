@@ -78,6 +78,11 @@ public class AudioClipCueSO : ScriptableObject
 		return audioClips[nextIndex];
 	}
 
+	public AudioClip GetClipByIndex(int index)
+	{
+		return audioClips[index];
+	}
+
 	public float RandomPitch()
     {
 		float randomPitch = Random.Range(Pitch + NegativePitchVariation, Pitch + PositivePitchVariation);

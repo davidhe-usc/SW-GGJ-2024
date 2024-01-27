@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioTempoHandling : MonoBehaviour
 {
-    //call AudioTempoHandling.instance.ChangePitch(type * -1); on TempoManager
+    //call AudioTempoHandling.instance.ChangeAudioTempo(type * -1); on TempoManager
 
     public static AudioTempoHandling instance;
 
@@ -34,24 +34,21 @@ public class AudioTempoHandling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    //    if (Input.GetKey(KeyCode.KeypadPlus))
-      //      ChangePitch(0.1f);
-        //if (Input.GetKey(KeyCode.KeypadMinus))
-          //  ChangePitch(-0.1f);
-        //if (Input.GetKey(KeyCode.KeypadEnter))
-          //  ResetPitch();
+
     }
     
-    public void ChangePitch(float tempoIncrement)
+    public void ChangeAudioTempo(float tempoIncrement)
     {
         int tempoDivider = 20;
         float pitchIncrement = tempoIncrement / tempoDivider;
         StartCoroutine(AudioUtility.AudioSourcePitchSlide(musicSource, pitchSlideDuration, pitchIncrement));
+
+        AmbienceManager.instance.CheckAmbienceIntensity((int)TempoManager.tempo);
     }
 
     public void ResetPitch()
     {
         float pitchDifference = Mathf.Abs(1 - musicSource.pitch);
-        ChangePitch(-pitchDifference);
+        ChangeAudioTempo(-pitchDifference);
     }
 }
