@@ -55,6 +55,7 @@ public class TempoManager : MonoBehaviour
         {
             tempo += type * -1;
         }
+        AudioTempoHandling.instance.ChangeAudioTempo(type * -1);
         StartCoroutine(AnswerDelay(type));
     }
 
