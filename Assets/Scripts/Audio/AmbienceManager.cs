@@ -33,14 +33,7 @@ public class AmbienceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Alpha1))
-            CheckAmbienceIntensity(1);
-        if (Input.GetKey(KeyCode.Alpha2))
-            CheckAmbienceIntensity(2);
-        if (Input.GetKey(KeyCode.Alpha3))
-            CheckAmbienceIntensity(3);
-        if (Input.GetKey(KeyCode.Alpha4))
-            CheckAmbienceIntensity(4);
+
     }
 
     public void CheckAmbienceIntensity (int tempo)
