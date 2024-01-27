@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class AudioTempoHandling : MonoBehaviour
 {
-    //call AudioTempoHandling.instance.ChangeAudioTempo(type * -1); on TempoManager
-
     public static AudioTempoHandling instance;
 
     [SerializeField] private AudioSource musicSource;
