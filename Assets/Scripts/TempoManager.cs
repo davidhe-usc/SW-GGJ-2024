@@ -39,6 +39,9 @@ public class TempoManager : MonoBehaviour
     int questionCount = 0; //current number of question
     int questionCap = 1; //how many questions in the current set
 
+    [SerializeField]
+    SimpleSpawner transitionSpawner;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -253,11 +256,13 @@ public class TempoManager : MonoBehaviour
             }    
             else if (nextMinigame == 1)
             {
-                SceneManager.LoadScene("PouringDate");
+                StartCoroutine(TransitionThenLoadScene("PouringDate", 1));
+                //SceneManager.LoadScene("PouringDate");
             }
             else
             {
-                SceneManager.LoadScene("PieToss");
+                StartCoroutine(TransitionThenLoadScene("PieToss", 1));
+                //SceneManager.LoadScene("PieToss");
             }
         }
     }
@@ -274,7 +279,8 @@ public class TempoManager : MonoBehaviour
 
     public void MinigameEnd(bool win)
     {
-        SceneManager.LoadScene("Date");
+        StartCoroutine(TransitionThenLoadScene("Date", 1));
+        //SceneManager.LoadScene("Date");
 
         //transitions and pauses
 
@@ -314,11 +320,13 @@ public class TempoManager : MonoBehaviour
     {
         if (nextMinigame == 1)
         {
-             SceneManager.LoadScene("PouringDog");
+            StartCoroutine(TransitionThenLoadScene("PouringDog", 1));
+            //SceneManager.LoadScene("PouringDog");
         }
         else
         {
-             SceneManager.LoadScene("DogToss");
+            StartCoroutine(TransitionThenLoadScene("DogToss", 1));
+            //SceneManager.LoadScene("DogToss");
         }
     }
 
@@ -326,7 +334,8 @@ public class TempoManager : MonoBehaviour
     {
         tempo = tempo / 2;
 
-        SceneManager.LoadScene("Date");
+        StartCoroutine(TransitionThenLoadScene("Date", 1));
+        //SceneManager.LoadScene("Date");
 
         //transitions and pauses
 
@@ -349,5 +358,12 @@ public class TempoManager : MonoBehaviour
             dogWins++;
 
         NextDialogue("DogWin" + dogWins);
+    }
+
+    IEnumerator TransitionThenLoadScene(string sceneName, float delay)
+    {
+        transitionSpawner.VagueSpawn();
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 }

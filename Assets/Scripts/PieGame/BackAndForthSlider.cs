@@ -46,7 +46,7 @@ public class BackAndForthSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && sliding == true)
+        if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space)) && sliding == true)
         {
             //SOUND - ThrowSound.Play();
             sliding = false;
