@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 935621724}
   - component: {fileID: 935621723}
   - component: {fileID: 935621726}
+  - component: {fileID: 935621727}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -230,7 +231,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionPrefab: {fileID: 0}
   canvas: {fileID: 0}
+  GenuineBorder: {fileID: 0}
+  TempoBorder: {fileID: 0}
   transitionSpawner: {fileID: 0}
+--- !u!114 &935621727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 935621722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c582341605a8a5c46822c84115471a33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2184183779757535948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -309,9 +324,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicCueMainMenu: {fileID: 0}
-  musicCueDate: {fileID: 0}
+  musicCueMain: {fileID: 0}
   musicCuePie: {fileID: 0}
   musicCuePouring: {fileID: 0}
+  musicCueIntro: {fileID: 0}
+  musicCueEnding: {fileID: 0}
+  musicCueDialogueBeing: {fileID: 0}
+  musicCueDialogueEnd: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -9,6 +9,12 @@ public class SFXOneShots : MonoBehaviour
     private AudioPlayOneShot audioPlayer;
 
     public AudioClipCueSO sfxPieThrow, sfxPieLand, sfxPieMiss;
+    [Space]
+    public AudioClipCueSO sfxMinigameWin;
+    public AudioClipCueSO sfxMinigameLose;
+    [Space]
+    public AudioClipCueSO sfxDialogueGenuine;
+    public AudioClipCueSO sfxDialogueWrong, sfxDialogueNeutral, sfxDialogueHonk;
 
     private void Awake()
     {

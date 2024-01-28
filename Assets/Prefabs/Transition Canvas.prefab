@@ -2957,6 +2957,8 @@ GameObject:
   - component: {fileID: 255043084599593835}
   - component: {fileID: 5324497185590564611}
   - component: {fileID: 3766192365746722058}
+  - component: {fileID: 1825507470348393571}
+  - component: {fileID: 7660932085845191065}
   m_Layer: 5
   m_Name: Transition Canvas
   m_TagString: Untagged
@@ -3221,6 +3223,45 @@ MonoBehaviour:
   transitionAnimator: {fileID: 5324497185590564611}
   exitAnimationName: TransitionExit
   lifetimeOnExit: 2
+--- !u!114 &1825507470348393571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5345651082573714103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fda2c69837ca228469a1ab798467386a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7660932085845191065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5345651082573714103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8176e45ad213994eb64f1531d44e2ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1825507470348393571}
+        m_TargetAssemblyTypeName: ObjectKiller, Assembly-CSharp
+        m_MethodName: DestroySlef
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5483039452362529985
 GameObject:
   m_ObjectHideFlags: 0

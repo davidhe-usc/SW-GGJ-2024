@@ -6,7 +6,7 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager instance;
 
-    public AudioClipCueSO musicCueMainMenu, musicCueDate, musicCuePie, musicCuePouring;
+    public AudioClipCueSO musicCueMainMenu, musicCueMain, musicCuePie, musicCuePouring, musicCueIntro, musicCueEnding, musicCueDialogueBeing, musicCueDialogueEnd;
 
     private AudioPlayCue musicPlayer;
 
@@ -21,9 +21,21 @@ public class MusicManager : MonoBehaviour
 
         DontDestroyOnLoad(this.gameObject);
         instance = this;
+
+        musicPlayer = GetComponent<AudioPlayCue>();
     }
 
-    public IEnumerator ChangeMusic(AudioClipCueSO musicCue)
+    private void Start()
+    {
+        //ChangeMusic(musicCueMain);
+    }
+
+    public void ChangeMusic(AudioClipCueSO musicCue)
+    {
+        StartCoroutine(ChangeMusicRoutine(musicCue));
+    }
+
+    private IEnumerator ChangeMusicRoutine(AudioClipCueSO musicCue)
     {
         musicPlayer.Stop(true);
         yield return new WaitForSeconds(musicPlayer.cue.fadeOutTime);
