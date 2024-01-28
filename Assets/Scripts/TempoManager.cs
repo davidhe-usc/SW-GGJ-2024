@@ -192,6 +192,7 @@ public class TempoManager : MonoBehaviour
 
     public void ReceiveAnswer(int type, int number)
     {
+        SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueSelect);
 
         if (type >= 1) //Genuine answer
         {

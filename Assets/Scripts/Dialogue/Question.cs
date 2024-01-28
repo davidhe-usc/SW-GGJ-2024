@@ -92,7 +92,7 @@ public class Question : MonoBehaviour
                 questionTimer -= Time.deltaTime;
                 if(questionTimer<=0)
                 {
-                    SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueHonk); //honk
+                    //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueHonk); //honk
                     questionTimer = 0;
                     TempoManager.instance.ReceiveAnswer(-12, 6); //Very bad answer
                     answered = true;
