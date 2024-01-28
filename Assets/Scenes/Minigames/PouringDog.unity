@@ -1241,6 +1241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 369011601}
+  dogAnimator: {fileID: 1264858672}
 --- !u!1 &981287861
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,6 +1758,7 @@ MonoBehaviour:
   canMove: 1
   tempoVelocityFactor: 4.2
   velocityMod: 300
+  tempoKnockbackMod: 25
 --- !u!114 &1385372660
 MonoBehaviour:
   m_ObjectHideFlags: 0

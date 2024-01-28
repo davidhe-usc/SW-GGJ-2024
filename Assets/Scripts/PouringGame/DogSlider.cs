@@ -8,6 +8,8 @@ public class DogSlider : MonoBehaviour
     private Slider dateSlider;
     [SerializeField]
     private PouringGame gameController;
+    [SerializeField]
+    private Animator dogAnimator;
 
     private bool freeze = false;
 
@@ -26,6 +28,15 @@ public class DogSlider : MonoBehaviour
         dateSlider.value = 1.0f * gameController.ballsInTarget  / gameController.dogVersionGoal;
         if (dateSlider.value == 1.0f) {
             freeze = true;
+        }
+
+        if (dateSlider.value >= 0.5f)
+        {
+            dogAnimator.SetBool("Happy", true);
+        }
+        else
+        {
+            dogAnimator.SetBool("Happy", false);
         }
 
     }

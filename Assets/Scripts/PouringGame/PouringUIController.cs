@@ -64,6 +64,14 @@ public class PouringUIController : MonoBehaviour
     void ShowLose()
     {
         print("lose");
+
+        if (!gameController.isDogVersion)
+        {
+            GameObject date = GameObject.Find("Date");
+            Animator dateAnimator = date.GetComponent<Animator>();
+            dateAnimator.SetTrigger("Sad");
+        }
+
         if (!TempoManager.instance)
         {
             return;
