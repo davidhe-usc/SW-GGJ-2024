@@ -14,7 +14,7 @@ public class SFXOneShots : MonoBehaviour
     public AudioClipCueSO sfxMinigameLose;
     [Space]
     public AudioClipCueSO sfxDialogueGenuine;
-    public AudioClipCueSO sfxDialogueWrong, sfxDialogueNeutral, sfxDialogueHonk;
+    public AudioClipCueSO sfxDialogueWrong, sfxDialogueNeutral, sfxDialogueHonk, sfxDialogueSelect;
 
     private void Awake()
     {

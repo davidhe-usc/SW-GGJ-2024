@@ -185,7 +185,9 @@ public class TempoManager : MonoBehaviour
     }
 
     public void ReceiveAnswer(int type, int number)
-    { 
+    {
+        MusicDrumRoll.instance.StopDrumRoll();
+
         if(type >= 1) //Genuine answer
         {
             tempo -= type;
