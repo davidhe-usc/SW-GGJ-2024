@@ -16,6 +16,8 @@ public class BallSpawner : MonoBehaviour
     float critModifier;
     [SerializeField]
     GameObject throwObject;
+    [SerializeField]
+    Sprite[] ballSprites;
     // Start is called before the first frame update
     
 
@@ -30,6 +32,7 @@ public class BallSpawner : MonoBehaviour
             //Debug.Log("Crit! New speed of " + ySpeed);
         }
         newBall.GetComponent<Rigidbody2D>().velocity = new Vector2(xSpeed, ySpeed);
+        newBall.GetComponent<SpriteRenderer>().sprite = ballSprites[Random.Range(0, ballSprites.Length)];
     }
 
     public void SpawnBallAtThrow()
