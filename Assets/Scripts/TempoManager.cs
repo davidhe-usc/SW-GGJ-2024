@@ -17,6 +17,9 @@ public class TempoManager : MonoBehaviour
     private int endThreshold = 4; //number of genuine responses for the date to end.
     private int tempoLimit = 40; //Max tempo before the date ends.
 
+    private int dogWins = 0;
+    private int dateWins = 0;
+
     public GameObject questionPrefab;
 
     public Canvas canvas;
@@ -270,19 +273,9 @@ public class TempoManager : MonoBehaviour
 
     public void MinigameEnd(bool win)
     {
-        if (win)
-        {
-            availableGenuine += 1;
-            tempo += 4;
-        }
-        else
-            tempo += 12;
-
         SceneManager.LoadScene("Date");
 
         //transitions and pauses
-
-        usedQuestions = new List<string>();
 
         if (nextMinigame == 1)
             nextMinigame = 2;
@@ -293,7 +286,20 @@ public class TempoManager : MonoBehaviour
 
         questionCount = 0;
 
-        Next();
+        if (win)
+        {
+            availableGenuine += 1;
+            tempo += 4;
+            if (dateWins < 4)
+                dateWins++;
+
+            NextDialogue("DateWin" + dateWins);
+        }
+        else
+        {
+            tempo += 12;
+            Next();
+        }
     }
 
     [YarnCommand("loadDogGame")]
@@ -317,8 +323,6 @@ public class TempoManager : MonoBehaviour
 
         //transitions and pauses
 
-        usedQuestions = new List<string>();
-
         if (nextMinigame == 1)
             nextMinigame = 2;
         else
@@ -328,6 +332,9 @@ public class TempoManager : MonoBehaviour
 
         questionCount = 0;
 
-        Next();
+        if (dogWins < 4)
+            dogWins++;
+
+        NextDialogue("DogWin" + dogWins);
     }
 }
