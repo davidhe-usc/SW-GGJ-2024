@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SX_Dialogue_Select_Wrong
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 6325d8598957ef445ad47e94aabc1ba2, type: 3}
+  - {fileID: 8300000, guid: b183baa7a6667684ab0d8297bece0f7a, type: 3}
   loop: 0
   Volume: 1
   Pitch: 1
