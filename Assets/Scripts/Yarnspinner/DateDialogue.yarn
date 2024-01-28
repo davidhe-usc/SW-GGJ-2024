@@ -636,12 +636,76 @@ Date: Really?
 <<next TempoManager>>
 ===
 
+title: DateWin1
+tags:
+--- 
+<<ChangeView thought>>
+MC: I usually love it when I see people laugh, but...
+<<next TempoManager>>
+===
+
+title: DateWin2
+tags:
+--- 
+<<ChangeView thought>>
+MC: Is this really what I should be doing on a date?
+<<next TempoManager>>
+===
+
+title: DateWin3
+tags:
+--- 
+<<ChangeView thought>>
+MC: Is being a clown really who I am? All that I am?
+<<next TempoManager>>
+===
+
+title: DateWin4
+tags:
+--- 
+<<ChangeView thought>>
+MC: I don't have to just be funny to be myself.
+<<next TempoManager>>
+===
+
 title: MissDog
 tags:
 --- 
 <<ChangeView thought>>
-MC: I miss my dog...
+MC: I miss Chuckles... I wonder what she's up to?
 <<loadDogGame TempoManager>>
+===
+
+title: DogWin1
+tags:
+--- 
+<<ChangeView thought>>
+MC: Chuckles is so cute... she loves me no matter what.
+<<next TempoManager>>
+===
+
+title: DogWin2
+tags:
+--- 
+<<ChangeView thought>>
+MC: Even if I mess up, Chuckles is there for me...
+<<next TempoManager>>
+===
+
+title: DogWin3
+tags:
+--- 
+<<ChangeView thought>>
+MC: My dog doesn't care - it's not that big a deal.
+<<next TempoManager>>
+===
+
+title: DogWin4
+tags:
+--- 
+<<ChangeView thought>>
+MC: Chuckles is the best...
+<<next TempoManager>>
 ===
 
 
