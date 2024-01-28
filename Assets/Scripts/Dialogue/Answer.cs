@@ -10,6 +10,7 @@ public class Answer : MonoBehaviour
     [SerializeField] TextMeshProUGUI answerShadow;
 
     int answerType = 0; //1 is genuine, 0 is neutral, -1 is wrong.
+    int answerNumber = 0; //index in the dictionary
 
     float angle = 0;
 
@@ -61,9 +62,10 @@ public class Answer : MonoBehaviour
     {
         return angle;
     }
-    public void SetAnswerType(int a)
+    public void SetAnswerType(int a, int n)
     {
         answerType = a;
+        answerNumber = n;
         if (a > 0)
         {
             GetComponent<Image>().sprite = genuineBall;
@@ -74,6 +76,11 @@ public class Answer : MonoBehaviour
     public int GetAnswerType()
     {
         return answerType;
+    }
+
+    public int GetAnswerNumber()
+    {
+        return answerNumber;
     }
 
     public void End(int chosen)

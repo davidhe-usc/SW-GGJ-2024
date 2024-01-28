@@ -1,0 +1,663 @@
+﻿title: Question1
+tags:
+---
+<<ChangeView date>>
+Date: Would you love me if I was a worm?
+<<question TempoManager Question1>>
+===
+
+title: Question1Response1
+tags:
+---
+<<ChangeView normal>>
+MC: Why wouldn't I love you? You're still yourself!
+<<ChangeView date>>
+Date: That's so sweet of you!
+<<next TempoManager>>
+===
+
+title: Question1Response2
+tags:
+--- 
+<<ChangeView normal>>
+MC: Do you think we could have worm dates at worm restaurants like we are right now?
+<<ChangeView date>>
+Date: Do you really think worms have restaurants?
+<<next TempoManager>>
+===
+
+title: Question1Response3
+tags:
+---
+<<ChangeView normal>>
+MC: I don't think I could resist eating you, I love worms, their <wave>slippery</wave> texture. You'd be like nature's spaghetti.
+<<ChangeView date>>
+Date: ...
+<<next TempoManager>>
+===
+
+title: Question1Response4
+tags:
+---
+<<ChangeView normal>>
+MC: I'd have to eat you. Isn't that what love is? I wouldn't want you to be eaten by a bird, so I'd take things into my own mouth.
+<<ChangeView date>>
+Date: ...
+<<next TempoManager>>
+===
+
+title: Question1Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: I would still respect you but we've only just met! It wouldn't be genuine of me to say that I could love you.
+<<ChangeView date>>
+Date: You're right, that's so true! Thanks for pointing that out.
+<<next TempoManager>>
+===
+
+title: Question2
+tags:
+---
+<<ChangeView date>>
+Date: Can you smell my feet?
+<<question TempoManager Question2>>
+===
+
+title: Question2Response1
+tags:
+---
+<<ChangeView normal>>
+MC: Can't smell a thing. Can you smell mine?
+<<ChangeView date>>
+Date: Not that I've noticed, no!
+<<next TempoManager>>
+===
+
+title: Question2Response2
+tags:
+---
+<<ChangeView normal>>
+MC: I haven't been able to smell since I got my nose surgery. <i>You honk your nose for good measure</i>
+<<ChangeView date>>
+Date: Oh, I'm sorry to hear that.
+<<next TempoManager>>
+===
+
+title: Question2Response3
+tags:
+---
+<<ChangeView normal>>
+MC: <i>Can</i> I? More like <i>will</i> I? I'd love to, let me get on my knees and just--
+<<ChangeView date>>
+Date: <shake>NO!!</shake>
+<<next TempoManager>>
+===
+
+title: Question2Response4
+tags:
+---
+<<ChangeView normal>>
+MC: Boy, are they sure stinky! L<i>Peeyew!</i> But there's nothing wrong with smelly feet, I, in fact, <wave>love</wave> them!
+<<ChangeView date>>
+Date: Oh. Uh. Thanks... I think?
+<<next TempoManager>>
+===
+
+title: Question2Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: I don't think I can but I'll let you know if I notice something.
+<<ChangeView date>>
+Date: Thanks. I've been thinking about it all day. That's a weight off my mind!
+<<next TempoManager>>
+===
+
+title: Question3
+tags:
+---
+<<ChangeView date>>
+Date: Would you like a bite of my dish?
+<<question TempoManager Question3>>
+===
+
+title: Question3Response1
+tags:
+---
+<<ChangeView normal>>
+MC: I'd love to try some if you don't mind!
+<<ChangeView date>>
+Date: Sure thing!
+<<next TempoManager>>
+===
+
+title: Question3Response2
+tags:
+---
+<<ChangeView normal>>
+MC: It's alright, but thank you.
+<<ChangeView date>>
+Date: Sure thing!
+<<next TempoManager>>
+===
+
+title: Question3Response3
+tags:
+---
+<<ChangeView normal>>
+MC: <i>You begin taking multiple bites from Lola's dish. It tastes quite good. </i>
+<<ChangeView date>>
+Date: Oh. Uh. Alright.
+<<next TempoManager>>
+===
+
+title: Question3Response4
+tags:
+---
+<<ChangeView normal>>
+MC: <i> You take Lola's dish and take a <shake>bite</shake> out of the plate. It tastes quite bad. </i>
+<<ChangeView date>>
+Date: What... on earth... is wrong with you?
+<<next TempoManager>>
+===
+
+title: Question3Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: Thank you, I'd love to. Would you like to try some of mine?
+<<ChangeView date>>
+Date: Oh, thanks! I'd love to! I was thinking about getting that as well!
+<<next TempoManager>>
+===
+
+title: Question4
+tags:
+---
+<<ChangeView date>>
+Date: Do you think a cereal is a soup?
+<<question TempoManager Question4>>
+===
+
+title: Question4Response1
+tags:
+---
+<<ChangeView normal>>
+MC: Yeah, I think cereal in milk could definitely be a soup!
+<<ChangeView date>>
+Date: You think so?
+<<next TempoManager>>
+===
+
+title: Question4Response2
+tags:
+---
+<<ChangeView normal>>
+MC: Food is food at the end of the day, you know?
+<<ChangeView date>>
+Date: I mean, I guess...
+<<next TempoManager>>
+===
+
+title: Question4Response3
+tags:
+---
+<<ChangeView normal>>
+MC: I mean, with the logic that objects in liquids equal soup. Your <wave>toilet</wave> could be soup. The ocean could be soup. The spa could be soup.
+<<ChangeView date>>
+Date: Uh.
+<<next TempoManager>>
+===
+
+title: Question4Response4
+tags:
+---
+<<ChangeView normal>>
+MC: Do you think a bath is a <wave>human soup?</wave>
+<<ChangeView date>>
+Date: Uh.
+<<next TempoManager>>
+===
+
+title: Question4Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: If soup is defined by a solid food in a liquid, sure, I could see that. But does it have to be a hot liquid, you think? I guess cold soups exist too.
+<<ChangeView date>>
+Date: Right? That's what <i>I'm</i> saying!
+<<next TempoManager>>
+===
+
+title: Question5
+tags:
+---
+<<ChangeView date>>
+Date: How was your day so far?
+<<question TempoManager Question5>>
+===
+
+title: Question5Response1
+tags:
+---
+<<ChangeView normal>>
+MC: It's been good! How has yours been?
+<<ChangeView date>>
+Date: It's been good as well, thank you for asking!
+<<next TempoManager>>
+===
+
+title: Question5Response2
+tags:
+---
+<<ChangeView normal>>
+MC: Kind of awful so far. But that's nobody's fault.
+<<ChangeView date>>
+Date: Oh, I'm sorry to hear that.
+<<next TempoManager>>
+===
+
+title: Question5Response3
+tags:
+---
+<<ChangeView normal>>
+MC: I woke up thirty minutes ago for this, haha.
+<<ChangeView date>>
+Date: Oh, I see.
+<<next TempoManager>>
+===
+
+title: Question5Response4
+tags:
+---
+<<ChangeView normal>>
+MC: Why do you want to know!? <shake>What does it matter to you how my day is!? That's a little <b>SUSPICIOUS!</b></shake>
+<<ChangeView date>>
+Date: Um, it's not that big of a deal? I don't need to know?
+<<next TempoManager>>
+===
+
+title: Question5Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: It's been good so far! I'm on a date with a cool person and I'm having a good time. How has yours been?
+<<ChangeView date>>
+Date: Aw, that's sweet of you! My day's been great too, thank you for asking!
+<<next TempoManager>>
+===
+
+title: Question6
+tags:
+---
+<<ChangeView date>>
+Date: How's your relationship with your family?
+<<question TempoManager Question6>>
+===
+
+title: Question6Response1
+tags:
+---
+<<ChangeView normal>>
+MC: It's okay. I like them just like anyone else does.
+<<ChangeView date>>
+Date: I see. That's it?
+<<next TempoManager>>
+===
+
+title: Question6Response2
+tags:
+---
+<<ChangeView normal>>
+MC: I'm not allowed to talk about my family. That's top secret.
+<<ChangeView date>>
+Date: Oh. Uh. Alright.
+<<next TempoManager>>
+===
+
+title: Question6Response3
+tags:
+---
+<<ChangeView normal>>
+MC: I was just born! I'm so fresh! I'm ready to <wave><b>boogie!</b></wave>
+<<ChangeView date>>
+Date: Oh. Uh. Alright.
+<<next TempoManager>>
+===
+
+title: Question6Response4
+tags:
+---
+<<ChangeView normal>>
+MC: We don't talk. I don't get invited to holidays, not since the <wave>Christmas incident.</wave> We haven't been in contact for the last <wave>seven</wave> years, haha!
+<<ChangeView date>>
+Date: Oh. Uh. Alright.
+<<next TempoManager>>
+===
+
+title: Question6Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: We have our ups and our downs like any family but I still look forward to seeing them when I can.
+<<ChangeView date>>
+Date: I understand, completely! I'm the same with my family too!
+<<next TempoManager>>
+===
+
+title: Question7
+tags:
+---
+<<ChangeView date>>
+Date: Do you like animals?
+<<question TempoManager Question7>>
+===
+
+title: Question7Response1
+tags:
+---
+<<ChangeView normal>>
+MC: I like them a lot! Do you have a favorite?
+<<ChangeView date>>
+Date: Oh, I'm quite fond of tigers and bears!
+<<next TempoManager>>
+===
+
+title: Question7Response2
+tags:
+---
+<<ChangeView normal>>
+MC: They don't particularly like me so I give them a respectful amount of space.
+<<ChangeView date>>
+Date: Oh, that's interesting. It's good you give them their space, though.
+<<next TempoManager>>
+===
+
+title: Question7Response3
+tags:
+---
+<<ChangeView normal>>
+MC: I think chicken might be my favorite, in that case.
+<<ChangeView date>>
+Date: Oh. I see.
+<<next TempoManager>>
+===
+
+title: Question7Response4
+tags:
+---
+<<ChangeView normal>>
+MC: This is an elephant! This is a giraffe! This is an alligator! <shake>This is a bird! This is a--</shake>
+<<ChangeView date>>
+Date: Okay - okay!
+<<next TempoManager>>
+===
+
+title: Question7Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: I have a dog named <rainb>Chuckles!</rainb> She's two years old and she makes every day so fun!
+<<ChangeView date>>
+Date: Aww! She sounds so sweet! I'd love to meet her some day! Do you have pictures?
+<<next TempoManager>>
+===
+
+title: Question8
+tags:
+---
+<<ChangeView date>>
+Date: What do you do for hobbies?
+<<question TempoManager Question8>>
+===
+
+title: Question8Response1
+tags:
+---
+<<ChangeView normal>>
+MC: I had to learn it for work but I really enjoy it now.
+<<ChangeView date>>
+Date: That's always nice -- being able to have fun with your work.
+<<next TempoManager>>
+===
+
+title: Question8Response2
+tags:
+---
+<<ChangeView normal>>
+MC: I've been reading a lot lately. Lots of mystery thrillers.
+<<ChangeView date>>
+Date: Oh? That's neat! Anything you'd recommend?
+<<next TempoManager>>
+===
+
+title: Question8Response3
+tags:
+---
+<<ChangeView normal>>
+MC: As soon as I get home I go to bed. I'm incredibly boring.
+<<ChangeView date>>
+Date: Oh... that doesn't sound particularly healthy...
+<<next TempoManager>>
+===
+
+title: Question8Response4
+tags:
+---
+<<ChangeView normal>>
+MC: Have you heard of BigTopCoin? I heard it's going to take off soon, I could get you in, if you wanted to.
+<<ChangeView date>>
+Date: Oh, uh. No, thanks. Good luck with that.
+<<next TempoManager>>
+===
+
+title: Question8Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: When I've got the time, I like to try new things! Recently I've been trying to garden.
+<<ChangeView date>>
+Date: Ooh! That sounds so neat! Trying new things is super fun! I've been learning piano!
+<<next TempoManager>>
+===
+
+title: Question9
+tags:
+---
+<<ChangeView date>>
+Date: What's a fun fact about you?
+<<question TempoManager Question9>>
+===
+
+title: Question9Response1
+tags:
+---
+<<ChangeView normal>>
+MC: I don't know if you've noticed this but... I'm a clown.
+<<ChangeView date>>
+Date: Well... I didn't want to assume anything.
+<<next TempoManager>>
+===
+
+title: Question9Response2
+tags:
+---
+<<ChangeView normal>>
+MC: <i>You begin to honk the tune of Mary Had A Little Lamb on your nose</i>
+<<ChangeView date>>
+Date: Oh.
+<<next TempoManager>>
+===
+
+title: Question9Response3
+tags:
+---
+<<ChangeView normal>>
+MC: Uh... I can't really think of anything off the top of my head. I'm pretty boring, haha!
+<<ChangeView date>>
+Date: Really? Nothing? That's too bad...
+<<next TempoManager>>
+===
+
+title: Question9Response4
+tags:
+---
+<<ChangeView normal>>
+MC: I love to just grab a chunk and start to munch. Whenever I need to get a hair cut, I ask them for a to go box.
+<<ChangeView date>>
+Date: What... on earth... is wrong with you?
+<<next TempoManager>>
+===
+
+title: Question9Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: When I have the time, I enjoy going to new places! I've always wanted to go see the Grinning Tower of Pizzazz!
+<<ChangeView date>>
+Date: Oh, that sounds like so much fun! I'd also love to see it some day!
+<<next TempoManager>>
+===
+
+title: Question10
+tags:
+---
+<<ChangeView date>>
+Date: Do you like your job?
+<<question TempoManager Question10>>
+===
+
+title: Question10Response1
+tags:
+---
+<<ChangeView normal>>
+MC: It has its ups and downs like any other job. Do you enjoy your job?
+<<ChangeView date>>
+Date: I suppose...
+<<next TempoManager>>
+===
+
+title: Question10Response2
+tags:
+---
+<<ChangeView normal>>
+MC: A job is a job at the end of the day. Do you enjoy your job?
+<<ChangeView date>>
+Date: I suppose...
+<<next TempoManager>>
+===
+
+title: Question10Response3
+tags:
+---
+<<ChangeView normal>>
+MC: A job is a job at the end of the day. Do you enjoy your job?
+<<ChangeView date>>
+Date: I suppose...
+<<next TempoManager>>
+===
+
+title: Question10Response4
+tags:
+---
+<<ChangeView normal>>
+MC: Sometimes I wonder if I made the right choice in my life and realize I'm just stuck here. But haha! <wave>Funny clown!</wave>
+<<ChangeView date>>
+Date: Oh... well... I don't think it's too late if you really want a change.
+<<next TempoManager>>
+===
+
+title: Question10Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: It's not easy some days but clowning is something I love doing. Seeing people smile is always a pleasure.
+<<ChangeView date>>
+Date: Oh, that's so fun! I'm glad to hear that you enjoy what you do!
+<<next TempoManager>>
+===
+
+title: Question11
+tags:
+---
+<<ChangeView date>>
+Date: What are the three digits on the back of your credit card?
+<<question TempoManager Question11>>
+===
+
+title: Question11Response1
+tags:
+---
+<<ChangeView normal>>
+MC: I don't think that's a good idea.
+<<ChangeView date>>
+Date: Really? Don't be a bore!
+<<next TempoManager>>
+===
+
+title: Question11Response2
+tags:
+---
+<<ChangeView normal>>
+MC: <i>You pull out your credit card and begin reading out the numbers</i>
+<<ChangeView date>>
+Date: Thanks so much!
+<<next TempoManager>>
+===
+
+title: Question11Response3
+tags:
+---
+<<ChangeView normal>>
+MC: Ever since I invested in that clown car and I mortgaged my bouncy house, my credit hasn't been the same.
+<<ChangeView date>>
+Date: Oh, I see.
+<<next TempoManager>>
+===
+
+title: Question11Response4
+tags:
+---
+<<ChangeView normal>>
+MC: No, thanks! No, thanks! No thanks no thanks no thanks!
+<<ChangeView date>>
+Date: Really?
+<<next TempoManager>>
+===
+
+title: Question11Response5
+tags:
+---
+<<ChangeView genuine>>
+MC: Haha, I'll swap you mine for yours!
+<<ChangeView date>>
+Date: Really?
+<<next TempoManager>>
+===
+
+title: MissDog
+tags:
+--- 
+<<ChangeView thought>>
+MC: I miss my dog...
+<<loadDogGame TempoManager>>
+===
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

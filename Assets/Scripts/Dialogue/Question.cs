@@ -78,7 +78,7 @@ public class Question : MonoBehaviour
                     {
                         if (a.transform.localPosition.y > targetHeightThreshold) //Testing value.
                         {
-                            TempoManager.instance.ReceiveAnswer(a.GetAnswerType());
+                            TempoManager.instance.ReceiveAnswer(a.GetAnswerType(), a.GetAnswerNumber());
                             answered = true;
                             a.End(1);
                         }
@@ -94,7 +94,7 @@ public class Question : MonoBehaviour
                 {
                     //Honk.
                     questionTimer = 0;
-                    TempoManager.instance.ReceiveAnswer(-2); //Very bad answer
+                    TempoManager.instance.ReceiveAnswer(-12, 6); //Very bad answer
                     answered = true;
                     foreach (Answer a in answerList)
                         a.End(-1);
@@ -125,7 +125,6 @@ public class Question : MonoBehaviour
     {
         for (int x = 0; x < answers.Length; x++)
         {
-            Debug.Log("Answer: " + x);
             answerList.Add(answers[x]); //Add answers to the list so they can start moving.
             yield return new WaitForSeconds((0.75f*((2f*Mathf.PI)/(2f+(tempo/8f)))) / answers.Length);
         }
@@ -143,7 +142,7 @@ public class Question : MonoBehaviour
         for(int x = 0; x<answers.Length; x++)
         {
             answers[x].SetText(texts[x]);
-            answers[x].SetAnswerType(types[x]);
+            answers[x].SetAnswerType(types[x],x+1);
         }
     }
 

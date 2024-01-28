@@ -297,8 +297,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Answer
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 24dbe82607e0aed45bc7c716a75c0b34, type: 2}
-  m_sharedMaterial: {fileID: 9112677436262536023, guid: 24dbe82607e0aed45bc7c716a75c0b34, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f1ab83d94ee5bc840b2ff8ed75683333, type: 2}
+  m_sharedMaterial: {fileID: 9112677436262536023, guid: f1ab83d94ee5bc840b2ff8ed75683333, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
