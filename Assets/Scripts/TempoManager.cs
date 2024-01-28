@@ -171,6 +171,8 @@ public class TempoManager : MonoBehaviour
 
         initialized = true;
 
+        MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
+
         Next(); //Temporary instant start
     }
     void OnEnable()
