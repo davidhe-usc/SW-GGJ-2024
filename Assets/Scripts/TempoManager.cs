@@ -268,7 +268,7 @@ public class TempoManager : MonoBehaviour
             }
             else if(availableGenuine > 0) //The 6th is the genuine answer. If one is supposed to appear, randomly replace one of the other options with it.
             {
-                int r = Random.Range(0, 5);
+                int r = Random.Range(0, 4);
                 texts[r] = k.Key;
                 types[r] = k.Value;
                 StartCoroutine(FadeImage(1, GenuineBorder));
