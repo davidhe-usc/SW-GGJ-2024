@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Fonts/HappyMonkey-Outline.asset.meta
+guid: 319e7f3ed7bc0e844bb09492e7dda778
+NativeFormatImporter:
+========
 guid: c7e4234c6a759e043b76768236569707
 folderAsset: yes
 DefaultImporter:
+>>>>>>>> ec43eabd7226c5e71c166e813c5a2e13dea1dc6b:Assets/Physics Materials.meta
   externalObjects: {}
+  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 

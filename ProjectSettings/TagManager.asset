@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Balls
   - Water
   - UI
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Characters
     uniqueID: 2443709757
+    locked: 0
+  - name: Props
+    uniqueID: 1174775081
     locked: 0
   - name: Player
     uniqueID: 2240607765

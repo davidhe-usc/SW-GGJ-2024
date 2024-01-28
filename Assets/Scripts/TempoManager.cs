@@ -11,7 +11,7 @@ public class TempoManager : MonoBehaviour
 
     private Question activeQuestion;
 
-    public static float tempo = 2f;
+    public static float tempo = 0f;
     private int genuineAnswers = 0;
 
     public GameObject questionPrefab;
@@ -55,7 +55,7 @@ public class TempoManager : MonoBehaviour
         {
             tempo += type * -1;
         }
-        AudioTempoHandling.instance.ChangeAudioTempo(type * -1);
+        //AudioTempoHandling.instance.ChangeAudioTempo(type * -1);
         StartCoroutine(AnswerDelay(type));
     }
 
@@ -84,9 +84,9 @@ public class TempoManager : MonoBehaviour
     {
         //To do: set up a system to organize questions and decide which one is created. For now they're placeholders.
         activeQuestion = Instantiate(questionPrefab, canvas.transform).GetComponent<Question>();
-        activeQuestion.transform.localPosition = new Vector3(0, -50f, 0);
+        activeQuestion.transform.localPosition = Vector3.zero;
         string[] texts = { "It's not my thing.", "It's a waste of time", "What's that?", "Can we placehold hands?"};
-        int[] types = { 1, -2, -1, -2 };
+        int[] types = { 8, -8, -4, -12 };
         activeQuestion.SetAnswerText(texts, types);
         activeQuestion.SetQuestionText("How do you feel about placeholder text?");
     }
