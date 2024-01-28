@@ -52,7 +52,7 @@ public class PouringGame : MonoBehaviour
             tempo = tempoOverride;
         }
         else {
-            tempo = tempoOverride;
+            tempo = TempoManager.tempo;
         }
         calcTime = maxTime - (tempo * tempoTimeMod);
         timeLeft = calcTime;
