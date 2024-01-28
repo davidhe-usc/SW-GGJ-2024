@@ -15,6 +15,7 @@ public class CharacterManager : MonoBehaviour
     [YarnCommand("changeExpression")]
     public void UpdateCharacterExpression(string newExpression)
     {
+        Debug.Log("New Expression: " + newExpression);
         characterAnimator.SetTrigger(newExpression);
     }
 }

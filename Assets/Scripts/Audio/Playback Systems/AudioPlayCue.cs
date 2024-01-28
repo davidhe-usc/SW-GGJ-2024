@@ -6,7 +6,7 @@ public class AudioPlayCue : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private AudioConfigurationSO config;
-    [SerializeField] private AudioClipCueSO cue;
+    [SerializeField] public AudioClipCueSO cue;
     private AudioSource audioSource;
 
     [Header("Properties")]
@@ -36,7 +36,7 @@ public class AudioPlayCue : MonoBehaviour
     {
         audioSource.playOnAwake = false;
         config.SetupAudioSource(audioSource);
-        cue.Initialize(audioSource);
+        cue.InitializeNoPitch(audioSource);
     }
 
     public void Play(bool fadeIn)

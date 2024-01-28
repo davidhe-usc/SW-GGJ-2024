@@ -24,10 +24,16 @@ public class PouringHand : MonoBehaviour
 
     public float velocityMod;
 
+    private AudioPlayCue audioPlayerLoop;
+    private bool canPlayAudio = true;
+
     void Start()
     {
         gameController.m_StartGame.AddListener(EnableMovement);
         gameController.m_EndGame.AddListener(DisableMovement);
+
+        audioPlayerLoop = GetComponent<AudioPlayCue>();
+        //audioPlayerLoop.Play(true);
     }
 
     void EnableMovement() {
@@ -53,6 +59,17 @@ public class PouringHand : MonoBehaviour
             if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && (Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space))) {
                 CreateBall();
                 ballCooldown = ballCooldownMax;
+
+                if(canPlayAudio == true)
+                {
+                    audioPlayerLoop.Play(false);
+                    canPlayAudio = false;
+                }
+            }
+            else
+            {
+                audioPlayerLoop.Stop(false);
+                canPlayAudio = true;
             }
             ballCooldown = Mathf.Max(ballCooldown - Time.deltaTime, 0);
         }

@@ -40,7 +40,13 @@ public class AudioClipCueSO : ScriptableObject
 		audioSource.loop = loop;
 	}
 
-	public AudioClip GetNextClip()
+    public void InitializeNoPitch(AudioSource audioSource)
+    {
+        audioSource.volume = Volume;
+        audioSource.loop = loop;
+    }
+
+    public AudioClip GetNextClip()
 	{
 		// Fast out if there is only one clip to play
 		if (audioClips.Length == 1)
