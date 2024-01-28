@@ -157,7 +157,7 @@ MonoBehaviour:
   canvas: {fileID: 2128039676}
   GenuineBorder: {fileID: 1864387369}
   TempoBorder: {fileID: 1161819231}
-  transitionSpawner: {fileID: 0}
+  transitionSpawner: {fileID: 237759063}
 --- !u!4 &237759062
 Transform:
   m_ObjectHideFlags: 0
