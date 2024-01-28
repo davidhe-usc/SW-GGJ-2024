@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="dogPour.png" width="3738" height="2408">
+    <SubTexture name="Dog_PourGame_00001.png" x="1" y="1" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00002.png" x="624" y="1" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00003.png" x="1247" y="1" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00004.png" x="1870" y="1" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00005.png" x="2493" y="1" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00006.png" x="3116" y="1" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00007.png" x="1" y="603" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00008.png" x="624" y="603" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00009.png" x="1247" y="603" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00010.png" x="1870" y="603" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00011.png" x="2493" y="603" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_00012.png" x="1" y="1" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00013.png" x="3116" y="603" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00014.png" x="1" y="1205" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00015.png" x="624" y="1205" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00016.png" x="1247" y="1205" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00017.png" x="1870" y="1205" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00018.png" x="2493" y="1205" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00019.png" x="3116" y="1205" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00020.png" x="1" y="1807" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00021.png" x="624" y="1807" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00022.png" x="1247" y="1807" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00023.png" x="1870" y="1807" width="621" height="600"/>
+    <SubTexture name="Dog_PourGame_Happy_00024.png" x="3116" y="603" width="621" height="600"/>
+</TextureAtlas>

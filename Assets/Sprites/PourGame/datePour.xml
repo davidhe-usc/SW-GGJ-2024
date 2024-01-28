@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePatheight="datePour.png" width="3340" height="4020">
+    <SubTexture name="Date_PourGame_00013.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00014.png" x="836" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00015.png" x="1671" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00016.png" x="2506" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00017.png" x="1" y="805" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00018.png" x="836" y="805" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00019.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00020.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00021.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00022.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00023.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_00024.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00013.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00014.png" x="836" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00015.png" x="1671" y="805" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00016.png" x="2506" y="805" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00017.png" x="1" y="1609" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00018.png" x="836" y="1609" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00019.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00020.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00021.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00022.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00023.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Blink_00024.png" x="1" y="1" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00001.png" x="1671" y="1609" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00002.png" x="2506" y="1609" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00003.png" x="1" y="2413" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00004.png" x="836" y="2413" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00005.png" x="1671" y="2413" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00006.png" x="2506" y="2413" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00007.png" x="1" y="3217" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00008.png" x="1" y="3217" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00009.png" x="1" y="3217" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00010.png" x="1" y="3217" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00011.png" x="1" y="3217" width="833" height="802"/>
+    <SubTexture name="Date_PourGame_Fail_00012.png" x="1" y="3217" width="833" height="802"/>
+</TextureAtlas>
