@@ -185,7 +185,7 @@ public class TempoManager : MonoBehaviour
     }
 
     public void ReceiveAnswer(int type, int number)
-    { 
+    {
         if(type >= 1) //Genuine answer
         {
             tempo -= type;
