@@ -82,6 +82,7 @@ public class PouringHand : MonoBehaviour
             gameController.numBalls++;
         }
         GameObject newBall = Instantiate(ball, spawn.position, new Quaternion(0, 0, Random.Range(-1f, 1f), 1));
+        newBall.GetComponent<SpriteRandomizer>().SetRandomSprite();
         newBall.GetComponent<Rigidbody2D>().AddForce(hoseRigidbody.transform.up * velocityMod);
     }
 }
