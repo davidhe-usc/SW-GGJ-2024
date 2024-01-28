@@ -22,6 +22,7 @@ public class PouringGame : MonoBehaviour
     public int numBalls;
     public float maxTimeToSettle;
     public int ballsInTarget;
+    public float calcTime;
 
     [SerializeField]
     private BoxCollider2D targetCollider;
@@ -38,10 +39,10 @@ public class PouringGame : MonoBehaviour
 
     void Start()
     {
-        print("invoking start game");
-        m_StartGame.Invoke();
         gameState = GameState.Active;
-        timeLeft = maxTime;
+        calcTime = maxTime;
+        timeLeft = calcTime;
+        m_StartGame.Invoke();
     }
 
     void Update()

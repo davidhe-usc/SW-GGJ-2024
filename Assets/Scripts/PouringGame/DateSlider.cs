@@ -12,14 +12,13 @@ public class DateSlider : MonoBehaviour
     void Start()
     {
         dateSlider = gameObject.GetComponent<Slider>();
-        dateSlider.value = 0.5f;
+        dateSlider.value = 0;
     }
 
     void Update()
     {
-        if (gameController.numBalls > 0) {
-            print(gameController.ballsInTarget / gameController.numBalls);
-            dateSlider.value = 1.0f * gameController.ballsInTarget  / gameController.numBalls;
+        if (gameController.gameState != PouringGame.GameState.Result) {
+            dateSlider.value = 1.0f * gameController.ballsInTarget  / gameController.maxBalls;
         }
     }
 }

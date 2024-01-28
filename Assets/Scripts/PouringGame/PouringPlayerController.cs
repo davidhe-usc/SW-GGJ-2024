@@ -37,6 +37,7 @@ public class PouringHand : MonoBehaviour
     void DisableMovement() {
         canMove = false;
         handRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
+        hoseRigidbody.constraints = RigidbodyConstraints2D.FreezeAll;
     }
 
     void FixedUpdate()
