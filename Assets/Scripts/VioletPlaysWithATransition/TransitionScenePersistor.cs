@@ -25,7 +25,15 @@ public class TransitionScenePersistor : MonoBehaviour
     void OnSceneLoaded (Scene scene, LoadSceneMode mode)
     {
         Debug.Log("do a thing, a scene just loaded!");
-        transitionAnimator.Play(exitAnimationName);
+        if (transitionAnimator == null)
+        {
+            transitionAnimator = GetComponent<Animator>(); //This throws an error saying the Persistor is gone.
+        }
+        if (transitionAnimator != null)
+        {
+            transitionAnimator.Play(exitAnimationName);
+        }
+        SceneManager.sceneLoaded -= OnSceneLoaded;
         //Destroy(this.gameObject, lifetimeOnExit); 
     }
 }
