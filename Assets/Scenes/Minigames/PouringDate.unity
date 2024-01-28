@@ -519,7 +519,7 @@ MonoBehaviour:
   tempoOverride: 40
   targetCollider: {fileID: 1983688127}
   maxTime: 15
-  dateVersionRatio: 0.75
+  dateVersionRatio: 0.7
   m_StartGame:
     m_PersistentCalls:
       m_Calls: []
@@ -2022,7 +2022,7 @@ MonoBehaviour:
   canMove: 1
   tempoVelocityFactor: 7
   velocityMod: 300
-  tempoKnockbackMod: 5
+  tempoKnockbackMod: 4
 --- !u!114 &1385372660
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -42,7 +42,7 @@ public class PouringHand : MonoBehaviour
         gameController.m_EndGame.AddListener(DisableMovement);
         tempo = gameController.tempo;
         tempoVelocityMod = tempo * tempoVelocityFactor;
-        knockbackChance = (tempo / 70f) / 2f;
+        knockbackChance = ((tempo / 100f) / 2f) + 0.1f;
 
         audioPlayerLoop = GetComponent<AudioPlayCue>();
         //audioPlayerLoop.Play(true);
