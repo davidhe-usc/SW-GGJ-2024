@@ -20,6 +20,15 @@ public class OutroCutscene : MonoBehaviour
 
     [SerializeField] Vector3[] positions;
 
+    [SerializeField]
+    Animator outroAnimator;
+    [SerializeField]
+    string[] animationNames;
+    [SerializeField]
+    SimpleSpawner transitionSpawner;
+    [SerializeField]
+    string nextSceneName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,15 +50,17 @@ public class OutroCutscene : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
+        outroAnimator.Play(animationNames[0]);
         dialogueRunner.StartDialogue("Outro1");
 
         while (dialogueRunner.IsDialogueRunning)
             yield return null;
 
         //this is where we animate the background
-
+        outroAnimator.Play(animationNames[1]);
         yield return new WaitForSeconds(1f);
 
+        
         dialogueRunner.StartDialogue("Outro2");
 
         while (dialogueRunner.IsDialogueRunning)
@@ -70,6 +81,7 @@ public class OutroCutscene : MonoBehaviour
 
         yield return new WaitForSeconds(1.2f);
 
+        outroAnimator.Play(animationNames[2]);
         dialogueRunner.StartDialogue("Outro3");
 
         while (dialogueRunner.IsDialogueRunning)
@@ -80,6 +92,7 @@ public class OutroCutscene : MonoBehaviour
         while (dialogueRunner.IsDialogueRunning)
             yield return null;
 
+        outroAnimator.Play(animationNames[3]);
         StartCoroutine(FadeImage(1, fade));
 
         yield return new WaitForSeconds(1f);
@@ -96,6 +109,7 @@ public class OutroCutscene : MonoBehaviour
 
         yield return new WaitForSeconds(1.2f);
 
+        //outroAnimator.Play(animationNames[4]);
         dialogueRunner.StartDialogue("Outro5");
 
         while (dialogueRunner.IsDialogueRunning)
@@ -107,6 +121,7 @@ public class OutroCutscene : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
+        //Null reference error here!
         if (TempoManager.instance.secret)
         {
             dialogueRunner.StartDialogue("OutroSecret");
@@ -116,8 +131,10 @@ public class OutroCutscene : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
         }
-
-        //SceneManager.LoadScene("Credits");
+        
+        transitionSpawner.VagueSpawn();
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(nextSceneName);
     }
 
     IEnumerator FadeImage(int direction, Image i)
