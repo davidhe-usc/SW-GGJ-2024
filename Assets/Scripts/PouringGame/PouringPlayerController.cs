@@ -22,6 +22,11 @@ public class PouringHand : MonoBehaviour
     [SerializeField]
     private bool canMove = false;
 
+    private float tempo;
+    [SerializeField]
+    private float tempoVelocityFactor;
+    private float tempoVelocityMod;
+
     public float velocityMod;
 
     private AudioPlayCue audioPlayerLoop;
@@ -31,6 +36,8 @@ public class PouringHand : MonoBehaviour
     {
         gameController.m_StartGame.AddListener(EnableMovement);
         gameController.m_EndGame.AddListener(DisableMovement);
+        tempo = gameController.tempo;
+        tempoVelocityMod = tempo * tempoVelocityFactor;
 
         audioPlayerLoop = GetComponent<AudioPlayCue>();
         //audioPlayerLoop.Play(true);
@@ -83,6 +90,6 @@ public class PouringHand : MonoBehaviour
         }
         GameObject newBall = Instantiate(ball, spawn.position, new Quaternion(0, 0, Random.Range(-1f, 1f), 1));
         newBall.GetComponent<SpriteRandomizer>().SetRandomSprite();
-        newBall.GetComponent<Rigidbody2D>().AddForce(hoseRigidbody.transform.up * velocityMod);
+        newBall.GetComponent<Rigidbody2D>().AddForce(hoseRigidbody.transform.up * (velocityMod + tempoVelocityMod));
     }
 }

@@ -23,7 +23,14 @@ public class PouringGame : MonoBehaviour
     public float maxTimeToSettle;
     public int ballsInTarget;
     public float calcTime;
+    public float tempo;
 
+    [SerializeField]
+    private float tempoTimeMod;
+    [SerializeField]
+    private bool useTempoOverride;
+    [SerializeField]
+    private float tempoOverride;
     [SerializeField]
     private BoxCollider2D targetCollider;
     [SerializeField]
@@ -40,7 +47,14 @@ public class PouringGame : MonoBehaviour
     void Start()
     {
         gameState = GameState.Active;
-        calcTime = maxTime;
+        if (useTempoOverride)
+        {
+            tempo = tempoOverride;
+        }
+        else {
+            tempo = tempoOverride;
+        }
+        calcTime = maxTime - (tempo * tempoTimeMod);
         timeLeft = calcTime;
         m_StartGame.Invoke();
 

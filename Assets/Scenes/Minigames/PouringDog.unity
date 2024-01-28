@@ -476,6 +476,10 @@ MonoBehaviour:
   maxTimeToSettle: 1
   ballsInTarget: 0
   calcTime: 0
+  tempo: 0
+  tempoTimeMod: 0.14
+  useTempoOverride: 1
+  tempoOverride: 40
   targetCollider: {fileID: 1983688127}
   maxTime: 15
   dateVersionRatio: 0.75
@@ -1751,6 +1755,7 @@ MonoBehaviour:
   handSpeed: 5
   ballCooldownMax: 0.05
   canMove: 1
+  tempoVelocityFactor: 4.2
   velocityMod: 300
 --- !u!114 &1385372660
 MonoBehaviour:

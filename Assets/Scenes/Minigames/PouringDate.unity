@@ -513,6 +513,10 @@ MonoBehaviour:
   maxTimeToSettle: 1
   ballsInTarget: 0
   calcTime: 0
+  tempo: 0
+  tempoTimeMod: 0.14
+  useTempoOverride: 0
+  tempoOverride: 40
   targetCollider: {fileID: 1983688127}
   maxTime: 15
   dateVersionRatio: 0.75
@@ -1208,7 +1212,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 687, y: -545}
+  m_AnchoredPosition: {x: 687, y: -462}
   m_SizeDelta: {x: 416, y: 111}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &826931647
@@ -2016,6 +2020,7 @@ MonoBehaviour:
   handSpeed: 5
   ballCooldownMax: 0.05
   canMove: 1
+  tempoVelocityFactor: 7
   velocityMod: 300
 --- !u!114 &1385372660
 MonoBehaviour:
