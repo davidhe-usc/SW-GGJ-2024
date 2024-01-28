@@ -215,7 +215,6 @@ public class TempoManager : MonoBehaviour
         int i = 0;
         foreach (KeyValuePair<string, int> k in questionList[question])
         {
-            Debug.Log(i + ": " + k.Key);
             if(i==0)
                 activeQuestion.SetQuestionText(k.Key);
             else if(i<5)
