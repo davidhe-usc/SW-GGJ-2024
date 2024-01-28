@@ -1,0 +1,2023 @@
+fileFormatVersion: 2
+guid: 0f53b06a4c13acc44b86e79db216d742
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Date_Blink_00013.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0be608d99d9de850800000000000000
+      internalID: 6407951128897973003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00014.png
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a73ed1df9155520800000000000000
+      internalID: 2690084927342606861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00015.png
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc31d2dcc1e4b4e0800000000000000
+      internalID: -1966698867427558222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00016.png
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfe63b082cbc72f90800000000000000
+      internalID: -6978385061343957252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00017.png
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ec9e9a8d4d017c0800000000000000
+      internalID: -4102545233505825239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00018.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6268f093af7f43d90800000000000000
+      internalID: -7118792456894708186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00019.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e463921bef11b1fd0800000000000000
+      internalID: -2370280993288800690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00020.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc2304757d2d2090800000000000000
+      internalID: -8057734175815160635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00021.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83ed0f952bb177930800000000000000
+      internalID: 4140808835217546808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00022.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77bf9fbced0c485f0800000000000000
+      internalID: -755266774353970313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00023.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fec8632a0fd02420800000000000000
+      internalID: 2603325819256884979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Blink_00024.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d447e938308674580800000000000000
+      internalID: -8842984979016289203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00025.png
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5e8884d74b21ed0800000000000000
+      internalID: -2444693197527915022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00026.png
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52a53ab28c4276a0800000000000000
+      internalID: -6453011191714962851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00027.png
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587b66d5fbecbbaa0800000000000000
+      internalID: -6144089945315821691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00028.png
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892a52e2359bcebb0800000000000000
+      internalID: -4905342127205670248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00029.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465fbf1d21fbba1f0800000000000000
+      internalID: -1032521601998129820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00030.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dcc3b6eb0ee34510800000000000000
+      internalID: 1532330033118694615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00031.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766d1b7760f8f7580800000000000000
+      internalID: -8827179486682163609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00032.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29ce34e9af7979cc0800000000000000
+      internalID: -3704325065836073838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00033.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 548830458a65e2c20800000000000000
+      internalID: 3183577267561531461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00034.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7580574997be63b90800000000000000
+      internalID: -7262358441674078121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00035.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1354e52eddbad870800000000000000
+      internalID: 8708481591290385179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Disgust_00036.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa6216a6ef7c8f20800000000000000
+      internalID: 3426254045127535272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00049.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1807
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d797cbcba8b0bc80800000000000000
+      internalID: -8308938264500791341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00050.png
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1807
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568285137c5b16ab0800000000000000
+      internalID: -5016528642783041435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00051.png
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1807
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 085c46740058e5c20800000000000000
+      internalID: 3197139021723911552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00052.png
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1807
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985d66884a1a6e050800000000000000
+      internalID: 5829524495712834953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00053.png
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 1807
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90f57afe4e9752840800000000000000
+      internalID: 5198695369049333513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00054.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 1807
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ffebc37377f47840800000000000000
+      internalID: 5221069943265292274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00055.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 1807
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 882f6180177aba5f0800000000000000
+      internalID: -744317209490820472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00056.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1205
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a379bf2e833436280800000000000000
+      internalID: -9051316914479196358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00057.png
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1205
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad7c82cb2f53f9d0800000000000000
+      internalID: -2741743106586280534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00058.png
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1205
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c4e48d7d259c45a0800000000000000
+      internalID: -6535684936609504057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00059.png
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1205
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14244b2e2b000de30800000000000000
+      internalID: 4526118393814991425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Happy_00060.png
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 1205
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca2a6f00201d5b860800000000000000
+      internalID: 7545166557265437356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00001.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ba8256ab626fa50800000000000000
+      internalID: 6554468889687272228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00002.png
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec450343299aceb0800000000000000
+      internalID: -4698774884480365340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00003.png
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bf52db415e860230800000000000000
+      internalID: 3604725031572234166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00004.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 1205
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45a5a7bc9f3417c0800000000000000
+      internalID: -4101583418299144884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00005.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 1205
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc9f3b23979ef010800000000000000
+      internalID: 1224582807032929460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00006.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501469a5b789bc920800000000000000
+      internalID: 3011668431395504389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00007.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce8e3282e038a9f0800000000000000
+      internalID: -457061612772225341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00008.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dbf5af4574e95920800000000000000
+      internalID: 2979663820980878291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00009.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdcc40ae439681820800000000000000
+      internalID: 2889174836943572191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00010.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37910ba1b3ec7f060800000000000000
+      internalID: 6987280100134754675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00011.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1707a7e54a61c1650800000000000000
+      internalID: 6204859281825230961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00012.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e849c3a5002792040800000000000000
+      internalID: 4623351838312010894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00013.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b577f937910942010800000000000000
+      internalID: 1163213042756843355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00014.png
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c539f9367db35c40800000000000000
+      internalID: 5499947885425931720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00015.png
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3169faeb158bdb0800000000000000
+      internalID: -4775977525394926626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00016.png
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f457139a3776ffd0800000000000000
+      internalID: -2308526665521212174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00017.png
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4894d24a8a75dc920800000000000000
+      internalID: 3012160107601283460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00018.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2da6c26e8dfa940800000000000000
+      internalID: 5309700968792380138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00019.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 3011
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 279888f8c7689c930800000000000000
+      internalID: 4164007200022890866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00020.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9e396798e6a0a0d0800000000000000
+      internalID: -3413544999643955554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00021.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631bd6bc12a456550800000000000000
+      internalID: 6153405974878990646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00022.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199f7dafddcfc04a0800000000000000
+      internalID: -6625642921442412143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00023.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be89385158f279b0800000000000000
+      internalID: -5083728001091662159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Idle_00024.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2409
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8778907662293b150800000000000000
+      internalID: 5887209831538460536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00037.png
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a142263397e2eef10800000000000000
+      internalID: 2300827557720892442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00038.png
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d3d6f5e2daedb300800000000000000
+      internalID: 269629744234288088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00039.png
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e9fb11371171ab0800000000000000
+      internalID: -5037538472273928609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00040.png
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1841fd6aef287d40800000000000000
+      internalID: 5582264422039111709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00041.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 104f3de9dee3c96c0800000000000000
+      internalID: -4135361167540095999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00042.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80330c21a332daa10800000000000000
+      internalID: 1922231348286731016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00043.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a95497b09b267bd0800000000000000
+      internalID: -2632869031596238423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00044.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feacb09ddb04c3480800000000000000
+      internalID: -8918181977965999377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00045.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174e6893108cab9c0800000000000000
+      internalID: -3910593418832190351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00046.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0da8dd3babed2a0800000000000000
+      internalID: -6710721113056685856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00047.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7321b890b0626b1b0800000000000000
+      internalID: -5641279654388362697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Sad_00048.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233d7cc26233acbc0800000000000000
+      internalID: -3762138299661561038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00061.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22b4914f2b11a7e0800000000000000
+      internalID: -1756092489920105938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00062.png
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c5b885e065031b20800000000000000
+      internalID: 3103830481914344899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00063.png
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba60a1c324fe1cea0800000000000000
+      internalID: -5854134972849715541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00064.png
+      rect:
+        serializedVersion: 2
+        x: 1171
+        y: 1
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5805e682c5783260800000000000000
+      internalID: 7077536292759996511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00065.png
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 1
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac464eb202e0d7e20800000000000000
+      internalID: 3349849229171647690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00066.png
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 1
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fef380dd49fbd390800000000000000
+      internalID: -7792360617628401930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00067.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8e433586307c860800000000000000
+      internalID: 7550007046917384419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00068.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fecba36c72a788030800000000000000
+      internalID: 3497179421901241583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00069.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a115a1a1b76276500800000000000000
+      internalID: 389322202951602458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00070.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226be66169fd1d260800000000000000
+      internalID: 7120718321563907618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00071.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df61f5ea2b554f310800000000000000
+      internalID: 1437868406956037885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Date_Thinking_00072.png
+      rect:
+        serializedVersion: 2
+        x: 3511
+        y: 603
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892cb6439df5cf720800000000000000
+      internalID: 2881283248102294168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PieHit_00073.png
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 1
+        width: 583
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9752e76dbb49730800000000000000
+      internalID: 4005032498552994294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Date_Blink_00013.png: 6407951128897973003
+      Date_Blink_00014.png: 2690084927342606861
+      Date_Blink_00015.png: -1966698867427558222
+      Date_Blink_00016.png: -6978385061343957252
+      Date_Blink_00017.png: -4102545233505825239
+      Date_Blink_00018.png: -7118792456894708186
+      Date_Blink_00019.png: -2370280993288800690
+      Date_Blink_00020.png: -8057734175815160635
+      Date_Blink_00021.png: 4140808835217546808
+      Date_Blink_00022.png: -755266774353970313
+      Date_Blink_00023.png: 2603325819256884979
+      Date_Blink_00024.png: -8842984979016289203
+      Date_Disgust_00025.png: -2444693197527915022
+      Date_Disgust_00026.png: -6453011191714962851
+      Date_Disgust_00027.png: -6144089945315821691
+      Date_Disgust_00028.png: -4905342127205670248
+      Date_Disgust_00029.png: -1032521601998129820
+      Date_Disgust_00030.png: 1532330033118694615
+      Date_Disgust_00031.png: -8827179486682163609
+      Date_Disgust_00032.png: -3704325065836073838
+      Date_Disgust_00033.png: 3183577267561531461
+      Date_Disgust_00034.png: -7262358441674078121
+      Date_Disgust_00035.png: 8708481591290385179
+      Date_Disgust_00036.png: 3426254045127535272
+      Date_Happy_00049.png: -8308938264500791341
+      Date_Happy_00050.png: -5016528642783041435
+      Date_Happy_00051.png: 3197139021723911552
+      Date_Happy_00052.png: 5829524495712834953
+      Date_Happy_00053.png: 5198695369049333513
+      Date_Happy_00054.png: 5221069943265292274
+      Date_Happy_00055.png: -744317209490820472
+      Date_Happy_00056.png: -9051316914479196358
+      Date_Happy_00057.png: -2741743106586280534
+      Date_Happy_00058.png: -6535684936609504057
+      Date_Happy_00059.png: 4526118393814991425
+      Date_Happy_00060.png: 7545166557265437356
+      Date_Idle_00001.png: 6554468889687272228
+      Date_Idle_00002.png: -4698774884480365340
+      Date_Idle_00003.png: 3604725031572234166
+      Date_Idle_00004.png: -4101583418299144884
+      Date_Idle_00005.png: 1224582807032929460
+      Date_Idle_00006.png: 3011668431395504389
+      Date_Idle_00007.png: -457061612772225341
+      Date_Idle_00008.png: 2979663820980878291
+      Date_Idle_00009.png: 2889174836943572191
+      Date_Idle_00010.png: 6987280100134754675
+      Date_Idle_00011.png: 6204859281825230961
+      Date_Idle_00012.png: 4623351838312010894
+      Date_Idle_00013.png: 1163213042756843355
+      Date_Idle_00014.png: 5499947885425931720
+      Date_Idle_00015.png: -4775977525394926626
+      Date_Idle_00016.png: -2308526665521212174
+      Date_Idle_00017.png: 3012160107601283460
+      Date_Idle_00018.png: 5309700968792380138
+      Date_Idle_00019.png: 4164007200022890866
+      Date_Idle_00020.png: -3413544999643955554
+      Date_Idle_00021.png: 6153405974878990646
+      Date_Idle_00022.png: -6625642921442412143
+      Date_Idle_00023.png: -5083728001091662159
+      Date_Idle_00024.png: 5887209831538460536
+      Date_Sad_00037.png: 2300827557720892442
+      Date_Sad_00038.png: 269629744234288088
+      Date_Sad_00039.png: -5037538472273928609
+      Date_Sad_00040.png: 5582264422039111709
+      Date_Sad_00041.png: -4135361167540095999
+      Date_Sad_00042.png: 1922231348286731016
+      Date_Sad_00043.png: -2632869031596238423
+      Date_Sad_00044.png: -8918181977965999377
+      Date_Sad_00045.png: -3910593418832190351
+      Date_Sad_00046.png: -6710721113056685856
+      Date_Sad_00047.png: -5641279654388362697
+      Date_Sad_00048.png: -3762138299661561038
+      Date_Thinking_00061.png: -1756092489920105938
+      Date_Thinking_00062.png: 3103830481914344899
+      Date_Thinking_00063.png: -5854134972849715541
+      Date_Thinking_00064.png: 7077536292759996511
+      Date_Thinking_00065.png: 3349849229171647690
+      Date_Thinking_00066.png: -7792360617628401930
+      Date_Thinking_00067.png: 7550007046917384419
+      Date_Thinking_00068.png: 3497179421901241583
+      Date_Thinking_00069.png: 389322202951602458
+      Date_Thinking_00070.png: 7120718321563907618
+      Date_Thinking_00071.png: 1437868406956037885
+      Date_Thinking_00072.png: 2881283248102294168
+      PieHit_00073.png: 4005032498552994294
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
