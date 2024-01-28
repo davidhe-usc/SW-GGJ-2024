@@ -17,5 +17,17 @@ public class CharacterManager : MonoBehaviour
     {
         Debug.Log("New Expression: " + newExpression);
         characterAnimator.SetTrigger(newExpression);
+
+        BackgroundMoodSwitch bg = FindObjectOfType<BackgroundMoodSwitch>();
+
+        if (newExpression == "Disgusted")
+        {
+            bg.BackgroundDisgusted();
+        }
+
+        else
+        {
+            bg.BackgroundRestore();
+        }
     }
 }
