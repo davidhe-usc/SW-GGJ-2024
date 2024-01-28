@@ -50,7 +50,7 @@ public class PouringHand : MonoBehaviour
             Vector3 direction = targetInWorld - handRigidbody.transform.position;
             handRigidbody.MovePosition(handRigidbody.transform.position + (direction.normalized * handSpeed));
 
-            if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && Input.GetKey(KeyCode.Mouse0)) {
+            if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && (Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space))) {
                 CreateBall();
                 ballCooldown = ballCooldownMax;
             }
