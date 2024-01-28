@@ -7,8 +7,8 @@ public class AmbienceManager : MonoBehaviour
     [SerializeField] private AudioPlayCue ambA, ambB, ambC, ambD;
 
     private int tempoThresholdB = 10;
-    private int tempoThresholdC = 25;
-    private int tempoThresholdD = 38;
+    private int tempoThresholdC = 20;
+    private int tempoThresholdD = 30;
 
     public static AmbienceManager instance;
 

@@ -188,6 +188,8 @@ public class TempoManager : MonoBehaviour
 
     public void ReceiveAnswer(int type, int number)
     {
+        SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueSelect);
+
         if(type >= 1) //Genuine answer
         {
             tempo -= type;
@@ -235,8 +237,6 @@ public class TempoManager : MonoBehaviour
             dialogueRunner.StartDialogue(questionName + "Response" + number);
         else
             Next();
-
-
     }
 
     [YarnCommand("question")]
