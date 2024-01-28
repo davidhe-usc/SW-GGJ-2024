@@ -220,10 +220,21 @@ public class TempoManager : MonoBehaviour
 
         GameObject.Destroy(activeQuestion.gameObject);
 
+        //AUDIO
+        if (type == 1)
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueGenuine);
+        else if (type == 0)
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueNeutral);
+        else
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueWrong);
+
+
         if (number < 6) //not a honk
             dialogueRunner.StartDialogue(questionName + "Response" + number);
         else
             Next();
+
+
     }
 
     [YarnCommand("question")]
