@@ -137,6 +137,9 @@ MonoBehaviour:
   resumeEvent:
     m_PersistentCalls:
       m_Calls: []
+  tempoMidpoint: 20
+  earlyTempoFactor: 0.4
+  lateTempoFactor: 0.8
 --- !u!1 &7799316577356178866
 GameObject:
   m_ObjectHideFlags: 0

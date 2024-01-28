@@ -24,6 +24,13 @@ public class BackAndForthSlider : MonoBehaviour
     UnityEvent failEvent;
     [SerializeField]
     UnityEvent resumeEvent;
+    [SerializeField]
+    float tempoMidpoint;
+    [SerializeField]
+    float earlyTempoFactor;
+    [SerializeField]
+    float lateTempoFactor;
+    float currentSpeed;
 
     float timeCounter = 0;
     // Start is called before the first frame update
@@ -33,6 +40,7 @@ public class BackAndForthSlider : MonoBehaviour
         {
             fieldGoalChecker = GameObject.FindObjectOfType<FieldGoalChecker>();
         }
+        currentSpeed = unmodifiedSpeed;
     }
 
     // Update is called once per frame
@@ -53,7 +61,18 @@ public class BackAndForthSlider : MonoBehaviour
         if (sliding == true)
         {
             /* COS version */
-            timeCounter += Time.deltaTime * unmodifiedSpeed;
+            float tempoModifier = 0;
+            float tempoRemaining = TempoManager.tempo * -1;
+            if (tempoRemaining > tempoMidpoint) //The tempo you get under halfway to max counts less than the tempo you get past the halfway point to max (since the jump from 2 to 3 would be big but the jump from 12 to 13 would be small).
+            {
+                tempoModifier += lateTempoFactor * (tempoRemaining - tempoMidpoint);
+                tempoRemaining = tempoMidpoint;
+            }
+            tempoModifier += tempoRemaining * earlyTempoFactor;
+            currentSpeed = unmodifiedSpeed + tempoModifier;
+
+            timeCounter += Time.deltaTime * currentSpeed;
+            
             throwingObject.transform.position = new Vector2(Mathf.Cos(timeCounter) * slideAreaWidth + offset, throwingObject.transform.position.y);
             if (timeCounter >= Mathf.Deg2Rad * 360)
             {
