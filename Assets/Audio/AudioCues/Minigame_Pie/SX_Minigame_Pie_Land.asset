@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb9438caeba78b74da22577979579999, type: 3}
-  m_Name: SX_Minigame_Pie_Land_01
+  m_Name: SX_Minigame_Pie_Land
   m_EditorClassIdentifier: 
   audioClips:
   - {fileID: 8300000, guid: 964332c4bb724a14c977152a049d454d, type: 3}

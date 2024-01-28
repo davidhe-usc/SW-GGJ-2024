@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb9438caeba78b74da22577979579999, type: 3}
-  m_Name: SX_Dog_Bark_Happpy_01
+  m_Name: SX_Dialogue_Select_Honk
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 48976031ea9b0564c9f9d9bc31e2d0c8, type: 3}
+  - {fileID: 8300000, guid: 6325d8598957ef445ad47e94aabc1ba2, type: 3}
   loop: 0
   Volume: 1
   Pitch: 1
   sequenceMode: 2
-  NegativePitchVariation: -0.1
-  PositivePitchVariation: 0.2
+  NegativePitchVariation: 0
+  PositivePitchVariation: 0
   NegativeVolumeVariation: 0
   PositiveVolumeVariation: 0
   lastIndex: 0
