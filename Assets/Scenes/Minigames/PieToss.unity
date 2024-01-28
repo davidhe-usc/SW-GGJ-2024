@@ -195,9 +195,9 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1379156615}
-        m_TargetAssemblyTypeName: TempoManager, Assembly-CSharp
-        m_MethodName: MinigameEnd
+      - m_Target: {fileID: 1768773264}
+        m_TargetAssemblyTypeName: PieWinCheck, Assembly-CSharp
+        m_MethodName: CallTempoMinigameEnd
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -665,7 +665,7 @@ Transform:
   m_GameObject: {fileID: 824867025}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.19, y: 3.0800002, z: 0}
+  m_LocalPosition: {x: 3.71, y: 3.0800002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -988,9 +988,9 @@ MonoBehaviour:
         m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1379156615}
-        m_TargetAssemblyTypeName: TempoManager, Assembly-CSharp
-        m_MethodName: MinigameEnd
+      - m_Target: {fileID: 1768773264}
+        m_TargetAssemblyTypeName: PieWinCheck, Assembly-CSharp
+        m_MethodName: CallTempoMinigameEnd
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1097,7 +1097,7 @@ Transform:
   m_GameObject: {fileID: 1925695340}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.35, y: 3.02, z: 0}
+  m_LocalPosition: {x: -3.77, y: 3.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
