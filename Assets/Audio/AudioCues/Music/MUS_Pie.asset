@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MUS_Pie
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: af3c54ed992c63b4e831dc2d0755aa8f, type: 3}
+  - {fileID: 8300000, guid: 34fc10943aca6814a9c887ca9587f6ff, type: 3}
   loop: 1
   Volume: 0.2
   Pitch: 1
@@ -24,8 +24,8 @@ MonoBehaviour:
   PositiveVolumeVariation: 0
   lastIndex: 0
   nextIndex: 0
-  fadeInTime: 0
-  fadeOutTime: 0
+  fadeInTime: 0.1
+  fadeOutTime: 0.1
   reverbTailLength: 0
   barLength: 0
   bpm: 0

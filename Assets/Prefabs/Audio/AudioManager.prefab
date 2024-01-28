@@ -161,6 +161,8 @@ MonoBehaviour:
   sfxPieThrow: {fileID: 11400000, guid: 3c4c4b23b639d814f971c29c1c54d990, type: 2}
   sfxPieLand: {fileID: 11400000, guid: 2b41b1fd9c0ced54ab8ee0d6d14a88f9, type: 2}
   sfxPieMiss: {fileID: 11400000, guid: 53a6ec48f74b7b745baa8c3ab01e72cc, type: 2}
+  sfxMinigameWin: {fileID: 11400000, guid: c359f8138400ccb4ca6272734bfcc733, type: 2}
+  sfxMinigameLose: {fileID: 11400000, guid: b84a56889ef1fde4fb193a09d04a2b8f, type: 2}
 --- !u!1 &2793546908347100150
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 7613eef1f17160a48a7fa6e774ffded0, type: 2}
   cue: {fileID: 11400000, guid: 23db5745700513b4f8ddaab95db46a78, type: 2}
-  playOnAwake: 1
+  playOnAwake: 0
   startOnRandomTime: 0
 --- !u!114 &3539973623112760632
 MonoBehaviour:
@@ -513,9 +515,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicCueMainMenu: {fileID: 11400000, guid: 23db5745700513b4f8ddaab95db46a78, type: 2}
-  musicCueDate: {fileID: 0}
-  musicCuePie: {fileID: 0}
-  musicCuePouring: {fileID: 0}
+  musicCueMain: {fileID: 11400000, guid: b11fee340e625244aa8a09a58bc96eb8, type: 2}
+  musicCuePie: {fileID: 11400000, guid: 19f78915cda144946824ada529ba67cb, type: 2}
+  musicCuePouring: {fileID: 11400000, guid: 6e0bb51ca4eb3c4438978a339e5076da, type: 2}
+  musicCueIntro: {fileID: 11400000, guid: 56d4c4a82260197409d4d0147d8828b2, type: 2}
+  musicCueEnding: {fileID: 11400000, guid: 127f36c94c893a14a84019d5706ca84d, type: 2}
+  musicCueDialogueBeing: {fileID: 11400000, guid: 2d8c529b7abf1eb459ef90b017025892, type: 2}
+  musicCueDialogueEnd: {fileID: 11400000, guid: 8c3c2dd0a9867f948af36b32fb7810fc, type: 2}
 --- !u!1 &4756683350901459107
 GameObject:
   m_ObjectHideFlags: 0

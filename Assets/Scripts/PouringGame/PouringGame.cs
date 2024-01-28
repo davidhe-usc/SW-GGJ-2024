@@ -43,6 +43,8 @@ public class PouringGame : MonoBehaviour
         calcTime = maxTime;
         timeLeft = calcTime;
         m_StartGame.Invoke();
+
+        MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePouring);
     }
 
     void Update()

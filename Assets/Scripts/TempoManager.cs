@@ -338,10 +338,12 @@ public class TempoManager : MonoBehaviour
             if (dateWins < 4)
                 dateWins++;
 
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxMinigameWin);
             NextDialogue("DateWin" + dateWins);
         }
         else
         {
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxMinigameLose);
             tempo += 12;
             Next();
         }
