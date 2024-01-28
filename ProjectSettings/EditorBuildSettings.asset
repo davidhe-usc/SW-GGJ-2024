@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/TestGame3.unity
     guid: 308a496eca60fd94790933d974bbb4b7
+  - enabled: 1
+    path: Assets/Scenes/VioletsTimeOutCorner.unity
+    guid: 8b5a5f96a6c02ee4985e63a663a7fc2c
+  - enabled: 1
+    path: Assets/Scenes/Minigames/DogToss.unity
+    guid: dada7ff25114ff4478f32cd2888eab67
   m_configObjects: {}
