@@ -57,6 +57,12 @@ public class AudioPlayOneShot : MonoBehaviour
         print("PLAY ONE SHOT with " + playMethod + " on " + gameObject.name);
     }
 
+    public void Play(AudioClipCueSO audioCue)
+    {
+        cue = audioCue;
+        Play();
+    }
+
     private void NoRandomization()
     {
         audioSource.PlayOneShot(cue.GetNextClip());
