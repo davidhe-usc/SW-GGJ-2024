@@ -768,6 +768,54 @@ MC: What a funny question!
 <<next TempoManager>>
 ===
 
+title: PieStart1
+tags:
+--- 
+<<ChangeView date>>
+Date: You're a clown. Throw some pies at me.
+<<loadMiniGame TempoManager>>
+===
+
+title: PieStart2
+tags:
+--- 
+<<ChangeView date>>
+MC: Pass me some pie.
+<<loadMiniGame TempoManager>>
+===
+
+title: PieStart3
+tags:
+--- 
+<<ChangeView date>>
+MC: Throw pies at me, that'll be funny.
+<<loadMiniGame TempoManager>>
+===
+
+title: PourStart1
+tags:
+--- 
+<<ChangeView date>>
+MC: Can I have a drink?
+<<loadMiniGame TempoManager>>
+===
+
+title: PourStart2
+tags:
+--- 
+<<ChangeView date>>
+MC: Would you pour me some water?
+<<loadMiniGame TempoManager>>
+===
+
+title: PourStart3
+tags:
+--- 
+<<ChangeView date>>
+MC: Show me how clowns drink water.
+<<loadMiniGame TempoManager>>
+===
+
 title: DateWin1
 tags:
 --- 
@@ -800,7 +848,23 @@ MC: I don't have to just be funny to be myself.
 <<next TempoManager>>
 ===
 
-title: MissDog
+title: MissDog1
+tags:
+--- 
+<<ChangeView thought>>
+MC: I miss Chuckles... I wonder what she's up to?
+<<loadDogGame TempoManager>>
+===
+
+title: MissDog2
+tags:
+--- 
+<<ChangeView thought>>
+MC: I miss Chuckles... I wonder what she's up to?
+<<loadDogGame TempoManager>>
+===
+
+title: MissDog3
 tags:
 --- 
 <<ChangeView thought>>

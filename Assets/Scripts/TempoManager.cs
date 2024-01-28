@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
@@ -50,6 +51,9 @@ public class TempoManager : MonoBehaviour
     SimpleSpawner transitionSpawner;
 
     bool initialized = false;
+
+    bool secretViable = false;
+    public bool secret = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -171,6 +175,8 @@ public class TempoManager : MonoBehaviour
 
         initialized = true;
 
+        MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
+
         Next(); //Temporary instant start
     }
     void OnEnable()
@@ -185,8 +191,9 @@ public class TempoManager : MonoBehaviour
     }
 
     public void ReceiveAnswer(int type, int number)
-    { 
-        if(type >= 1) //Genuine answer
+    {
+
+        if (type >= 1) //Genuine answer
         {
             tempo -= type;
             if (tempo < 0)
@@ -194,16 +201,19 @@ public class TempoManager : MonoBehaviour
             genuineAnswers += 1;
             availableGenuine -= 1;
             usedQuestions.Add(questionName);
-            if(genuineAnswers >= endThreshold)
-            {
-                //end the game
-            }
         }
         else //Otherwise, increase tempo by how wrong the answer was
         {
             StartCoroutine(FadeImage(-1, GenuineBorder));
             tempo += type * -1;
+            if (secretViable && number == 2)
+            {
+                Debug.Log("???");
+                secret = true;
+            }
         }
+        secretViable = false;
+
         Color c = TempoBorder.color;
         if(tempo>0)
             TempoBorder.color = new Color(c.r, c.g, c.b, (float)tempo/50f);
@@ -220,6 +230,14 @@ public class TempoManager : MonoBehaviour
 
         GameObject.Destroy(activeQuestion.gameObject);
 
+        //AUDIO
+        if (type == 1)
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueGenuine);
+        else if (type == 0)
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueNeutral);
+        else
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueWrong);
+
         if (number < 6) //not a honk
             dialogueRunner.StartDialogue(questionName + "Response" + number);
         else
@@ -229,6 +247,9 @@ public class TempoManager : MonoBehaviour
     [YarnCommand("question")]
     public void CreateQuestion(string question)
     {
+        if(question.Equals("Question11"))
+            secretViable = true;
+
         activeQuestion = Instantiate(questionPrefab, canvas.transform).GetComponent<Question>();
         activeQuestion.transform.localPosition = Vector3.zero;
 
@@ -262,9 +283,12 @@ public class TempoManager : MonoBehaviour
     [YarnCommand("next")]
     public void Next()
     {
-        Debug.Log("Next");
         StartCoroutine(FadeImage(-1, GenuineBorder));
-        if (questionCount < questionCap)
+        if (genuineAnswers >= endThreshold)
+        {
+            StartCoroutine(TransitionThenLoadScene("Outro", 1));
+        }
+        else if (questionCount < questionCap)
         {
             questionCount++;
 
@@ -283,12 +307,16 @@ public class TempoManager : MonoBehaviour
             }    
             else if (nextMinigame == 1)
             {
-                StartCoroutine(TransitionThenLoadScene("PouringDate", 1));
+                int node = Random.Range(1, 4);
+                StartCoroutine(NextDialogue("PourStart" + node));
+                //StartCoroutine(TransitionThenLoadScene("PouringDate", 1));
                 //SceneManager.LoadScene("PouringDate");
             }
             else
             {
-                StartCoroutine(TransitionThenLoadScene("PieToss", 1));
+                int node = Random.Range(1, 4);
+                StartCoroutine(NextDialogue("PieStart" + node));
+                //StartCoroutine(TransitionThenLoadScene("PieToss", 1));
                 //SceneManager.LoadScene("PieToss");
             }
         }
@@ -383,7 +411,24 @@ public class TempoManager : MonoBehaviour
             upcomingDialogue = null;
         }
 
+        MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
+
         StartCoroutine(TransitionThenLoadScene("Date", 1));
+    }
+
+    [YarnCommand("loadMiniGame")]
+    public void LoadMiniGame()
+    {
+        if (nextMinigame == 1)
+        {
+            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePouring);
+            StartCoroutine(TransitionThenLoadScene("PouringDate", 1));
+        }
+        else
+        {
+            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePie);
+            StartCoroutine(TransitionThenLoadScene("PieToss", 1));
+        }
     }
 
     [YarnCommand("loadDogGame")]
