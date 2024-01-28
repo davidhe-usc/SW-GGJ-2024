@@ -31,6 +31,9 @@ public class PouringUIController : MonoBehaviour
 
     void Update()
     {
+        if (gameController.isDogVersion) {
+            return;
+        }
         currentTime = Mathf.Max(0, currentTime - Time.deltaTime);
         timeBarFill.fillAmount = currentTime / maxTime;
         float sparkPosition = (1 - timeBarFill.fillAmount) * timeBarFill.rectTransform.sizeDelta.x;
@@ -44,8 +47,16 @@ public class PouringUIController : MonoBehaviour
     void ShowWin()
     {
         print("win");
-        if (TempoManager.instance)
+        if (!TempoManager.instance)
         {
+            return;
+        }
+
+        if (gameController.isDogVersion)
+        {
+            TempoManager.instance.DogMinigameEnd();
+        }
+        else {
             TempoManager.instance.MinigameEnd(true);
         }
     }
@@ -53,8 +64,16 @@ public class PouringUIController : MonoBehaviour
     void ShowLose()
     {
         print("lose");
-        if (TempoManager.instance)
+        if (!TempoManager.instance)
         {
+            return;
+        }
+
+        if (gameController.isDogVersion) // shouldnt be necessary but just in case
+        {
+            TempoManager.instance.DogMinigameEnd();
+        }
+        else {
             TempoManager.instance.MinigameEnd(false);
         }
     }
