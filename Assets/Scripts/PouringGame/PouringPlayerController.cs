@@ -81,13 +81,15 @@ public class PouringHand : MonoBehaviour
 
                 if(canPlayAudio == true)
                 {
-                    audioPlayerLoop.Play(false);
+                    if(audioPlayerLoop!=null)
+                        audioPlayerLoop.Play(false);
                     canPlayAudio = false;
                 }
             }
             else
             {
-                audioPlayerLoop.Stop(false);
+                if (audioPlayerLoop != null)
+                    audioPlayerLoop.Stop(false);
                 canPlayAudio = true;
             }
             ballCooldown = Mathf.Max(ballCooldown - Time.deltaTime, 0);
