@@ -18,14 +18,14 @@ public class SFXOneShots : MonoBehaviour
 
     private void Awake()
     {
-        SFXOneShots[] tms = FindObjectsOfType<SFXOneShots>();
+        //SFXOneShots[] tms = FindObjectsOfType<SFXOneShots>();
 
-        if (tms.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
+       // if (tms.Length > 1)
+        //{
+        //    Destroy(this.gameObject);
+        //}
 
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         instance = this;
 
         audioPlayer = GetComponent<AudioPlayOneShot>();
@@ -34,10 +34,5 @@ public class SFXOneShots : MonoBehaviour
     public void PlayOneShot(AudioClipCueSO audioCue)
     {
         audioPlayer.Play(audioCue);
-    }
-
-    private void PlayInternal(AudioClipCueSO audioCue)
-    {
-
     }
 }
