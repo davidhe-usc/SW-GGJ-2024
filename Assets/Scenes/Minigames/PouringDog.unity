@@ -1241,6 +1241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameController: {fileID: 369011601}
+  dogAnimator: {fileID: 1264858672}
 --- !u!1 &981287861
 GameObject:
   m_ObjectHideFlags: 0

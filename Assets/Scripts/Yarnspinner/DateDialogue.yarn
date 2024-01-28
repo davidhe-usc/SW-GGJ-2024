@@ -117,7 +117,7 @@ tags:
 ---
 <<ChangeView normal>>
 <<changeExpression Date Displeased>>
-MC: Boy, are they sure stinky! L<i>Peeyew!</i> But there's nothing wrong with smelly feet, I, in fact, <wave>love</wave> them!
+MC: Boy, are they sure stinky! <i>Peeyew!</i> But there's nothing wrong with smelly feet, I, in fact, <wave>love</wave> them!
 <<ChangeView date>>
 Date: Oh. Uh. Thanks... I think?
 <<changeExpression Date Default>>
