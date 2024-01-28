@@ -26,6 +26,6 @@ public class TransitionScenePersistor : MonoBehaviour
     {
         Debug.Log("do a thing, a scene just loaded!");
         transitionAnimator.Play(exitAnimationName);
-        Destroy(this.gameObject, lifetimeOnExit);
+        //Destroy(this.gameObject, lifetimeOnExit);
     }
 }

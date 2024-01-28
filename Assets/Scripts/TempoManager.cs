@@ -29,6 +29,8 @@ public class TempoManager : MonoBehaviour
     int nextMinigame; //set to 1 for hose, 2 for pies.
     int duplicateCount = 0;
 
+    string upcomingDialogue; //Dialogue to load after scene changes
+
     //Questions
     Dictionary<string, Dictionary<string, int>> questionList;
 
@@ -47,6 +49,8 @@ public class TempoManager : MonoBehaviour
     [SerializeField]
     SimpleSpawner transitionSpawner;
 
+    bool initialized = false;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -54,6 +58,7 @@ public class TempoManager : MonoBehaviour
 
         if (tms.Length > 1)
         {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
             Destroy(this.gameObject);
         }
 
@@ -164,7 +169,13 @@ public class TempoManager : MonoBehaviour
 
         questionCap = Random.Range(1, 4);
 
+        initialized = true;
+
         Next(); //Temporary instant start
+    }
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     // Update is called once per frame
@@ -239,7 +250,7 @@ public class TempoManager : MonoBehaviour
                 int r = Random.Range(0, 5);
                 texts[r] = k.Key;
                 types[r] = k.Value;
-                FadeImage(1, GenuineBorder);
+                StartCoroutine(FadeImage(1, GenuineBorder));
             }
             i++;
         }
@@ -251,6 +262,7 @@ public class TempoManager : MonoBehaviour
     [YarnCommand("next")]
     public void Next()
     {
+        Debug.Log("Next");
         StartCoroutine(FadeImage(-1, GenuineBorder));
         if (questionCount < questionCap)
         {
@@ -289,13 +301,36 @@ public class TempoManager : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
 
-        dialogueRunner.StartDialogue(node);
+        if (node != null)
+            dialogueRunner.StartDialogue(node);
+        else
+            Next();
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name.Equals("Date") && initialized)
+        {
+            dialogueRunner = FindObjectOfType<DialogueRunner>();
+            canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+            TempoBorder = GameObject.Find("TempoBorder").GetComponent<Image>();
+            GenuineBorder = GameObject.Find("GenuineBorder").GetComponent<Image>();
+
+            if (upcomingDialogue != null)
+            {
+                Debug.Log("Scene loaded, starting node: " + upcomingDialogue);
+                StartCoroutine(NextDialogue(upcomingDialogue));
+            }
+            else
+            {
+                Debug.Log("Scene loaded, prodeeding to next");
+                StartCoroutine(NextDialogue(null));
+            }
+        }
     }
 
     public void MinigameEnd(bool win)
     {
-        StartCoroutine(TransitionThenLoadScene("Date", 1));
-        //SceneManager.LoadScene("Date");
 
         //transitions and pauses
 
@@ -338,13 +373,15 @@ public class TempoManager : MonoBehaviour
             if (dateWins < 4)
                 dateWins++;
 
-            NextDialogue("DateWin" + dateWins);
+            upcomingDialogue = "DateWin" + dateWins;
         }
         else
         {
             tempo += 12;
-            Next();
+            upcomingDialogue = null;
         }
+
+        StartCoroutine(TransitionThenLoadScene("Date", 1));
     }
 
     [YarnCommand("loadDogGame")]
@@ -366,7 +403,6 @@ public class TempoManager : MonoBehaviour
     {
         tempo = tempo / 2;
 
-        StartCoroutine(TransitionThenLoadScene("Date", 1));
         //SceneManager.LoadScene("Date");
 
         //transitions and pauses
@@ -389,7 +425,9 @@ public class TempoManager : MonoBehaviour
         if (dogWins < 4)
             dogWins++;
 
-        NextDialogue("DogWin" + dogWins);
+        upcomingDialogue = "DogWin" + dogWins;
+
+        StartCoroutine(TransitionThenLoadScene("Date", 1));
     }
 
     IEnumerator TransitionThenLoadScene(string sceneName, float delay)
