@@ -33,7 +33,10 @@ public class Question : MonoBehaviour
 
 
     [SerializeField] GameObject AnswerPrefab;
-    [SerializeField] Slider TimeBar;
+    [SerializeField] Image TimeBar;
+    [SerializeField] Image TimeBarFill;
+    [SerializeField] Image TimeBarSparks;
+    float initialQuestionTime;
 
     private void Awake()
     {
@@ -58,6 +61,7 @@ public class Question : MonoBehaviour
     {
         targetHeightThreshold = targetHeight - 20;
         answerList = new List<Answer>();
+        initialQuestionTime = questionTimer;
         StartCoroutine(MoveAnswers());
     }
 
@@ -95,7 +99,13 @@ public class Question : MonoBehaviour
                     foreach (Answer a in answerList)
                         a.End(-1);
                 }
-                TimeBar.value = questionTimer;
+                TimeBarFill.fillAmount = questionTimer/initialQuestionTime;
+                float sparkPosition = (1 - TimeBarFill.fillAmount) * TimeBarFill.rectTransform.sizeDelta.x;
+                TimeBarSparks.rectTransform.anchoredPosition = new Vector2(sparkPosition, 0);
+                if (questionTimer <= 0.15f)
+                {
+                    TimeBarSparks.GetComponent<Animator>().SetBool("Explode", true);
+                }
             }
 
             foreach (Answer a in answerList)
