@@ -36,7 +36,7 @@ public class AudioPlayCue : MonoBehaviour
     {
         audioSource.playOnAwake = false;
         config.SetupAudioSource(audioSource);
-        cue.Initialize(audioSource);
+        cue.InitializeNoPitch(audioSource);
     }
 
     public void Play(bool fadeIn)
