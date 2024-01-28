@@ -163,6 +163,10 @@ MonoBehaviour:
   sfxPieMiss: {fileID: 11400000, guid: 53a6ec48f74b7b745baa8c3ab01e72cc, type: 2}
   sfxMinigameWin: {fileID: 11400000, guid: c359f8138400ccb4ca6272734bfcc733, type: 2}
   sfxMinigameLose: {fileID: 11400000, guid: b84a56889ef1fde4fb193a09d04a2b8f, type: 2}
+  sfxDialogueGenuine: {fileID: 11400000, guid: e0f5a09510095f14d97eab4443cc9430, type: 2}
+  sfxDialogueWrong: {fileID: 11400000, guid: abb1552ff00eb6e4ea05d9dd3366093f, type: 2}
+  sfxDialogueNeutral: {fileID: 11400000, guid: ef3d3943884c07246ade9bf9b110657f, type: 2}
+  sfxDialogueHonk: {fileID: 11400000, guid: 36737c99a530b2c46a75fe6b2199190c, type: 2}
 --- !u!1 &2793546908347100150
 GameObject:
   m_ObjectHideFlags: 0
