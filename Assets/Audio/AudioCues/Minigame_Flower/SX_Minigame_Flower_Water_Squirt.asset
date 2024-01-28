@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9438caeba78b74da22577979579999, type: 3}
   m_Name: SX_Minigame_Flower_Water_Squirt
   m_EditorClassIdentifier: 
-  audioClips: []
-  loop: 0
+  audioClips:
+  - {fileID: 8300000, guid: c18c3f440000f36479885daf8b3e0ed4, type: 3}
+  loop: 1
   Volume: 1
   Pitch: 1
   sequenceMode: 2
@@ -21,10 +22,10 @@ MonoBehaviour:
   PositivePitchVariation: 0
   NegativeVolumeVariation: 0
   PositiveVolumeVariation: 0
-  lastIndex: 0
-  nextIndex: 0
-  fadeInTime: 0
-  fadeOutTime: 0
+  lastIndex: -2147483648
+  nextIndex: -2147483648
+  fadeInTime: 0.1
+  fadeOutTime: 0.1
   reverbTailLength: 0
   barLength: 0
   bpm: 0

@@ -12,7 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb9438caeba78b74da22577979579999, type: 3}
   m_Name: SX_Minigame_Flower_Water_HitTarget
   m_EditorClassIdentifier: 
-  audioClips: []
+  audioClips:
+  - {fileID: 8300000, guid: 1ff13e6bcd573c345b1e63d1ab624059, type: 3}
+  - {fileID: 8300000, guid: d4859c4be6b9721459fcdd35ea80a269, type: 3}
+  - {fileID: 8300000, guid: 218feb0efef93d14a9c33045570fe171, type: 3}
+  - {fileID: 8300000, guid: fcad29cde6b92a949a0b0ff228336ec0, type: 3}
+  - {fileID: 8300000, guid: a80aebc623f37524590c2cca21c08286, type: 3}
+  - {fileID: 8300000, guid: f52c7166783e0884088d2dcd6cfe03f8, type: 3}
+  - {fileID: 8300000, guid: ab9a096de163aab4fa856e3ac73c02a1, type: 3}
+  - {fileID: 8300000, guid: cd80d711ed9ba1141856eee0d253e4ca, type: 3}
   loop: 0
   Volume: 1
   Pitch: 1
