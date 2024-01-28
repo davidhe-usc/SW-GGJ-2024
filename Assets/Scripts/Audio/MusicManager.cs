@@ -12,14 +12,14 @@ public class MusicManager : MonoBehaviour
 
     private void Awake()
     {
-        MusicManager[] tms = FindObjectsOfType<MusicManager>();
+        //MusicManager[] tms = FindObjectsOfType<MusicManager>();
 
-        if (tms.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
+        //if (tms.Length > 1)
+        //{
+         //   Destroy(this.gameObject);
+        //}
 
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         instance = this;
 
         musicPlayer = GetComponent<AudioPlayCue>();
