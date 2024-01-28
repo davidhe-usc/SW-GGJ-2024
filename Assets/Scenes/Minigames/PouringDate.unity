@@ -2443,7 +2443,7 @@ MonoBehaviour:
   tempoVelocityFactor: 7
   velocityMod: 300
   tempoKnockbackMod: 4
-  activeHandRegion: {fileID: 0}
+  activeHandRegion: {fileID: 827632030}
 --- !u!114 &1385372660
 MonoBehaviour:
   m_ObjectHideFlags: 0
