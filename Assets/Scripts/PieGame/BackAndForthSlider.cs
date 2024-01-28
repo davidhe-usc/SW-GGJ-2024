@@ -44,8 +44,6 @@ public class BackAndForthSlider : MonoBehaviour
             fieldGoalChecker = GameObject.FindObjectOfType<FieldGoalChecker>();
         }
         currentSpeed = unmodifiedSpeed;
-
-        MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePie);
     }
 
     // Update is called once per frame

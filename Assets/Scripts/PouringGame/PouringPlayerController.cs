@@ -32,12 +32,17 @@ public class PouringHand : MonoBehaviour
     private AudioPlayCue audioPlayerLoop;
     private bool canPlayAudio = true;
 
+    private float knockbackChance;
+    [SerializeField]
+    private float tempoKnockbackMod;
+
     void Start()
     {
         gameController.m_StartGame.AddListener(EnableMovement);
         gameController.m_EndGame.AddListener(DisableMovement);
         tempo = gameController.tempo;
         tempoVelocityMod = tempo * tempoVelocityFactor;
+        knockbackChance = ((tempo / 100f) / 2f) + 0.1f;
 
         audioPlayerLoop = GetComponent<AudioPlayCue>();
         //audioPlayerLoop.Play(true);
@@ -87,6 +92,10 @@ public class PouringHand : MonoBehaviour
         if (!gameController.isDogVersion)
         {
             gameController.numBalls++;
+        }
+        if (Random.Range(0f, 1f) < knockbackChance)
+        {
+            hoseRigidbody.AddForce(new Vector2(0, tempo * tempoKnockbackMod));
         }
         GameObject newBall = Instantiate(ball, spawn.position, new Quaternion(0, 0, Random.Range(-1f, 1f), 1));
         newBall.GetComponent<SpriteRandomizer>().SetRandomSprite();
