@@ -2022,6 +2022,7 @@ MonoBehaviour:
   canMove: 1
   tempoVelocityFactor: 7
   velocityMod: 300
+  tempoKnockbackMod: 5
 --- !u!114 &1385372660
 MonoBehaviour:
   m_ObjectHideFlags: 0
