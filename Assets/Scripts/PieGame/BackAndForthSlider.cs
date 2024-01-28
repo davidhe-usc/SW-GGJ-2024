@@ -34,7 +34,6 @@ public class BackAndForthSlider : MonoBehaviour
 
     float timeCounter = 0;
 
-    AudioPlayOneShot audioPlayer;
     [SerializeField] AudioClipCueSO sfxPieThrow, sfxPieLand, sfxPieMiss;
 
     // Start is called before the first frame update
@@ -45,8 +44,6 @@ public class BackAndForthSlider : MonoBehaviour
             fieldGoalChecker = GameObject.FindObjectOfType<FieldGoalChecker>();
         }
         currentSpeed = unmodifiedSpeed;
-
-        audioPlayer = GetComponent<AudioPlayOneShot>();
     }
 
     // Update is called once per frame
@@ -55,17 +52,16 @@ public class BackAndForthSlider : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space)) && sliding == true)
         {
             //SOUND - ThrowSound.Play();
-            //audioPlayer.Play(sfxPieThrow);
-            SFXOneShots.instance.PlayOneShot(sfxPieThrow);
+           // SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieThrow);
 
             sliding = false;
             if (fieldGoalChecker.IsWithinSuccessBounds() == true)
             {
-                SFXOneShots.instance.PlayOneShot(sfxPieLand);
+                //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieLand);
                 succeedEvent.Invoke();
             } else
             {
-                SFXOneShots.instance.PlayOneShot(sfxPieMiss);
+                //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieMiss);
                 failEvent.Invoke();
             }
         }

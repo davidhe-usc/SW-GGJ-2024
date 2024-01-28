@@ -21,7 +21,7 @@ public class AudioPlayOneShot : MonoBehaviour
     #region Setup
     private void OnValidate()
     {
-        ConfigureAudioSource();
+        //ConfigureAudioSource();
     }
 
     private void Awake()
@@ -34,8 +34,7 @@ public class AudioPlayOneShot : MonoBehaviour
 
     private void ConfigureAudioSource()
     {
-        if (audioSource == null)
-            audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
 
         config.SetupAudioSource(audioSource);
         cue.Initialize(audioSource);
@@ -75,7 +74,16 @@ public class AudioPlayOneShot : MonoBehaviour
 
     private void PitchRandomization()
     {
-        audioSource.pitch = cue.RandomPitch();
+        float pitch = cue.RandomPitch();
+        print(pitch);
+        if(pitch != null)
+        {
+            audioSource.pitch = pitch;
+        }
+        else
+        {
+            audioSource.pitch = 1f;
+        }
         audioSource.PlayOneShot(cue.GetNextClip());
     }
 

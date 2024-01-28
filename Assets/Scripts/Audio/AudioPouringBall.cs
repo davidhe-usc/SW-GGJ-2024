@@ -19,7 +19,7 @@ public class AudioPouringBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.relativeVelocity.magnitude > 1)
-            audioPlayer.Play();
+        //if(collision.relativeVelocity.magnitude > 1)
+          //  audioPlayer.Play();
     }
 }

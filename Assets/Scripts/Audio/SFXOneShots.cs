@@ -7,6 +7,9 @@ public class SFXOneShots : MonoBehaviour
     public static SFXOneShots instance;
 
     private AudioPlayOneShot audioPlayer;
+
+    public AudioClipCueSO sfxPieThrow, sfxPieLand, sfxPieMiss;
+
     private void Awake()
     {
         SFXOneShots[] tms = FindObjectsOfType<SFXOneShots>();
