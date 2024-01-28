@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 public class TempoManager : MonoBehaviour
@@ -26,6 +27,7 @@ public class TempoManager : MonoBehaviour
 
     int minigameCount = 0;
     int nextMinigame; //set to 1 for hose, 2 for pies.
+    int duplicateCount = 0;
 
     //Questions
     Dictionary<string, Dictionary<string, int>> questionList;
@@ -38,6 +40,9 @@ public class TempoManager : MonoBehaviour
 
     int questionCount = 0; //current number of question
     int questionCap = 1; //how many questions in the current set
+
+    [SerializeField] Image GenuineBorder;
+    [SerializeField] Image TempoBorder;
 
     [SerializeField]
     SimpleSpawner transitionSpawner;
@@ -185,8 +190,15 @@ public class TempoManager : MonoBehaviour
         }
         else //Otherwise, increase tempo by how wrong the answer was
         {
+            StartCoroutine(FadeImage(-1, GenuineBorder));
             tempo += type * -1;
         }
+        Color c = TempoBorder.color;
+        if(tempo>0)
+            TempoBorder.color = new Color(c.r, c.g, c.b, (float)tempo/50f);
+        else
+            TempoBorder.color = new Color(c.r, c.g, c.b, 0);
+
         AudioTempoHandling.instance.ChangeAudioTempo(type * -1);
         StartCoroutine(AnswerDelay(type, number));
     }
@@ -227,15 +239,19 @@ public class TempoManager : MonoBehaviour
                 int r = Random.Range(0, 5);
                 texts[r] = k.Key;
                 types[r] = k.Value;
+                FadeImage(1, GenuineBorder);
             }
             i++;
         }
         activeQuestion.SetAnswerText(texts, types);
+
+        StartCoroutine(FadeGroup(1, activeQuestion.GetComponent<CanvasGroup>()));
     }
 
     [YarnCommand("next")]
     public void Next()
     {
+        StartCoroutine(FadeImage(-1, GenuineBorder));
         if (questionCount < questionCap)
         {
             questionCount++;
@@ -283,6 +299,8 @@ public class TempoManager : MonoBehaviour
 
         //transitions and pauses
 
+        int lastMinigame = nextMinigame;
+
         minigameCount++;
         if (minigameCount < 2)
         {
@@ -293,6 +311,21 @@ public class TempoManager : MonoBehaviour
         }
         else
             nextMinigame = Random.Range(1, 3);
+
+        if (lastMinigame == nextMinigame)
+        {
+            duplicateCount++;
+            if (duplicateCount > 2)
+            {
+                if (nextMinigame == 1)
+                    nextMinigame = 2;
+                else
+                    nextMinigame = 1;
+                duplicateCount = 0;
+            }
+        }
+        else
+            duplicateCount = 0;
 
         questionCap = Random.Range(1, 4);
 
@@ -364,5 +397,37 @@ public class TempoManager : MonoBehaviour
         transitionSpawner.VagueSpawn();
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(sceneName);
+    }
+
+    IEnumerator FadeImage(int direction, Image i)
+    {
+        if(direction>0)
+            while(i.color.a < 1)
+            {
+                i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a + (Time.deltaTime));
+                yield return null;
+            }
+        else
+            while (i.color.a > 0)
+            {
+                i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime));
+                yield return null;
+            }
+    }
+
+    IEnumerator FadeGroup(int direction, CanvasGroup c)
+    {
+        if (direction > 0)
+            while (c.alpha < 1)
+            {
+                c.alpha += Time.deltaTime*4f;
+                yield return null;
+            }
+        else
+            while (c.alpha > 0)
+            {
+                c.alpha -= Time.deltaTime * 4f;
+                yield return null;
+            }
     }
 }

@@ -56,7 +56,7 @@ public class PouringHand : MonoBehaviour
             Vector3 direction = targetInWorld - handRigidbody.transform.position;
             handRigidbody.MovePosition(handRigidbody.transform.position + (direction.normalized * handSpeed));
 
-            if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && Input.GetKey(KeyCode.Mouse0)) {
+            if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && (Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space))) {
                 CreateBall();
                 ballCooldown = ballCooldownMax;
 
@@ -82,6 +82,7 @@ public class PouringHand : MonoBehaviour
             gameController.numBalls++;
         }
         GameObject newBall = Instantiate(ball, spawn.position, new Quaternion(0, 0, Random.Range(-1f, 1f), 1));
+        newBall.GetComponent<SpriteRandomizer>().SetRandomSprite();
         newBall.GetComponent<Rigidbody2D>().AddForce(hoseRigidbody.transform.up * velocityMod);
     }
 }
