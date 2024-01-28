@@ -171,6 +171,8 @@ public class TempoManager : MonoBehaviour
 
         initialized = true;
 
+        MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
+
         Next(); //Temporary instant start
     }
     void OnEnable()
@@ -294,11 +296,13 @@ public class TempoManager : MonoBehaviour
             }    
             else if (nextMinigame == 1)
             {
+                MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePouring);
                 StartCoroutine(TransitionThenLoadScene("PouringDate", 1));
                 //SceneManager.LoadScene("PouringDate");
             }
             else
             {
+                MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePie);
                 StartCoroutine(TransitionThenLoadScene("PieToss", 1));
                 //SceneManager.LoadScene("PieToss");
             }
@@ -394,6 +398,7 @@ public class TempoManager : MonoBehaviour
             upcomingDialogue = null;
         }
 
+        MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
         StartCoroutine(TransitionThenLoadScene("Date", 1));
     }
 

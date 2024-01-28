@@ -52,13 +52,11 @@ public class PouringGame : MonoBehaviour
             tempo = tempoOverride;
         }
         else {
-            tempo = tempoOverride;
+            tempo = TempoManager.tempo;
         }
         calcTime = maxTime - (tempo * tempoTimeMod);
         timeLeft = calcTime;
         m_StartGame.Invoke();
-
-        MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePouring);
     }
 
     void Update()
