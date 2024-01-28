@@ -2013,7 +2013,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2543227592742641294, guid: 2157f08b6e4d6404ca832a6109cf17c8, type: 3}
       propertyPath: m_Name
-      value: Test Character
+      value: Date
       objectReference: {fileID: 0}
     - target: {fileID: 4121867480155990244, guid: 2157f08b6e4d6404ca832a6109cf17c8, type: 3}
       propertyPath: m_Materials.Array.data[0]
