@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5445213929801968244}
   - component: {fileID: 6279146864025957712}
+  - component: {fileID: 9073749564612881759}
   m_Layer: 0
   m_Name: Toss Win Manager
   m_TagString: Untagged
@@ -100,3 +101,16 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   pieScoreCounter: {fileID: 0}
+--- !u!114 &9073749564612881759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4088848014625808963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afd523f57fec7994f8564ae42bb4a950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabToSpawn: {fileID: 5345651082573714103, guid: 260b593efea0b38449f6d299c178f9d3, type: 3}

@@ -12,4 +12,9 @@ public class SimpleSpawner : MonoBehaviour
     {
         Instantiate(prefabToSpawn, transform.position, Quaternion.identity);
     }
+
+    public void VagueSpawn()
+    {
+        Instantiate(prefabToSpawn);
+    }
 }

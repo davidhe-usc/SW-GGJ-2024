@@ -21,9 +21,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigames/TestGame3.unity
     guid: 308a496eca60fd94790933d974bbb4b7
   - enabled: 1
-    path: Assets/Scenes/VioletsTimeOutCorner.unity
-    guid: 8b5a5f96a6c02ee4985e63a663a7fc2c
-  - enabled: 1
     path: Assets/Scenes/Minigames/DogToss.unity
     guid: dada7ff25114ff4478f32cd2888eab67
   - enabled: 1
@@ -35,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/PouringDog.unity
     guid: 7732a70078116c542bd6bf9d5822abbd
+  - enabled: 1
+    path: Assets/Scenes/Date.unity
+    guid: 630b583eedd6364478a069d7f1395771
   m_configObjects: {}

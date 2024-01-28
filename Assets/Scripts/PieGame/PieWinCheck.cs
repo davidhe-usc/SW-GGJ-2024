@@ -64,4 +64,13 @@ public class PieWinCheck : MonoBehaviour
             Fail();
         }
     }
+
+    public void CallTempoMinigameEnd(bool won)
+    {
+        TempoManager.instance.MinigameEnd(won);
+    }
+    public void CallTempoDogGameEnd()
+    {
+        TempoManager.instance.DogMinigameEnd();
+    }
 }
