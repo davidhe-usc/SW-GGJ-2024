@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TextureAtlas imagePath="dog.png" width="1920" height="1446">
+    <SubTexture name="Dog_00013.png" x="0" y="961" width="495" height="485"/>
+    <SubTexture name="Dog_00014.png" x="937" y="477" width="495" height="484"/>
+    <SubTexture name="Dog_00015.png" x="1432" y="0" width="488" height="477"/>
+    <SubTexture name="Dog_00016.png" x="0" y="0" width="490" height="475"/>
+    <SubTexture name="Dog_00017.png" x="0" y="477" width="493" height="483"/>
+    <SubTexture name="Dog_00018.png" x="495" y="961" width="493" height="485"/>
+    <SubTexture name="Dog_Happy_00001.png" x="988" y="961" width="451" height="485"/>
+    <SubTexture name="Dog_Happy_00002.png" x="493" y="477" width="444" height="483"/>
+    <SubTexture name="Dog_Happy_00003.png" x="490" y="0" width="459" height="475"/>
+    <SubTexture name="Dog_Happy_00004.png" x="949" y="0" width="483" height="475"/>
+    <SubTexture name="Dog_Happy_00005.png" x="1432" y="477" width="460" height="484"/>
+    <SubTexture name="Dog_Happy_00006.png" x="1439" y="961" width="447" height="485"/>
+</TextureAtlas>
