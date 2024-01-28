@@ -24,6 +24,7 @@ public class TempoManager : MonoBehaviour
 
     public Canvas canvas;
 
+    int minigameCount = 0;
     int nextMinigame; //set to 1 for hose, 2 for pies.
 
     //Questions
@@ -277,10 +278,16 @@ public class TempoManager : MonoBehaviour
 
         //transitions and pauses
 
-        if (nextMinigame == 1)
-            nextMinigame = 2;
+        minigameCount++;
+        if (minigameCount < 2)
+        {
+            if (nextMinigame == 1)
+                nextMinigame = 2;
+            else
+                nextMinigame = 1;
+        }
         else
-            nextMinigame = 1;
+            nextMinigame = Random.Range(1, 3);
 
         questionCap = Random.Range(1, 4);
 
@@ -323,10 +330,16 @@ public class TempoManager : MonoBehaviour
 
         //transitions and pauses
 
-        if (nextMinigame == 1)
-            nextMinigame = 2;
+        minigameCount++;
+        if (minigameCount < 2)
+        {
+            if (nextMinigame == 1)
+                nextMinigame = 2;
+            else
+                nextMinigame = 1;
+        }
         else
-            nextMinigame = 1;
+            nextMinigame = Random.Range(1, 3);
 
         questionCap = Random.Range(1, 4);
 
