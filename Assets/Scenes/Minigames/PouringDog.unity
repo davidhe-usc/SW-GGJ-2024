@@ -478,7 +478,7 @@ MonoBehaviour:
   calcTime: 0
   tempo: 0
   tempoTimeMod: 0.14
-  useTempoOverride: 1
+  useTempoOverride: 0
   tempoOverride: 40
   targetCollider: {fileID: 1983688127}
   maxTime: 15
