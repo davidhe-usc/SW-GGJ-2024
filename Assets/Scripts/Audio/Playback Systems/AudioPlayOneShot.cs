@@ -64,7 +64,7 @@ public class AudioPlayOneShot : MonoBehaviour
 
     private void NoRandomization()
     {
-        audioSource.PlayOneShot(cue.GetNextClip());
+        audioSource.PlayOneShot(cue.GetNextClip(), cue.Volume);
     }
 
     private void VolumeRandomization()
@@ -75,7 +75,6 @@ public class AudioPlayOneShot : MonoBehaviour
     private void PitchRandomization()
     {
         float pitch = cue.RandomPitch();
-        print(pitch);
         if(pitch != null)
         {
             audioSource.pitch = pitch;
@@ -84,7 +83,7 @@ public class AudioPlayOneShot : MonoBehaviour
         {
             audioSource.pitch = 1f;
         }
-        audioSource.PlayOneShot(cue.GetNextClip());
+        audioSource.PlayOneShot(cue.GetNextClip(), cue.Volume);
     }
 
     private void PitchAndVolumeRandomization()
