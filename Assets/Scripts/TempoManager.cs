@@ -17,10 +17,14 @@ public class TempoManager : MonoBehaviour
     private int endThreshold = 4; //number of genuine responses for the date to end.
     private int tempoLimit = 40; //Max tempo before the date ends.
 
+    private int dogWins = 0;
+    private int dateWins = 0;
+
     public GameObject questionPrefab;
 
     public Canvas canvas;
 
+    int minigameCount = 0;
     int nextMinigame; //set to 1 for hose, 2 for pies.
 
     //Questions
@@ -34,6 +38,9 @@ public class TempoManager : MonoBehaviour
 
     int questionCount = 0; //current number of question
     int questionCap = 1; //how many questions in the current set
+
+    [SerializeField]
+    SimpleSpawner transitionSpawner;
 
     // Start is called before the first frame update
     void Awake()
@@ -249,11 +256,13 @@ public class TempoManager : MonoBehaviour
             }    
             else if (nextMinigame == 1)
             {
-                SceneManager.LoadScene("PouringDate");
+                StartCoroutine(TransitionThenLoadScene("PouringDate", 1));
+                //SceneManager.LoadScene("PouringDate");
             }
             else
             {
-                SceneManager.LoadScene("PieToss");
+                StartCoroutine(TransitionThenLoadScene("PieToss", 1));
+                //SceneManager.LoadScene("PieToss");
             }
         }
     }
@@ -270,30 +279,40 @@ public class TempoManager : MonoBehaviour
 
     public void MinigameEnd(bool win)
     {
-        if (win)
-        {
-            availableGenuine += 1;
-            tempo += 4;
-        }
-        else
-            tempo += 12;
-
-        SceneManager.LoadScene("Date");
+        StartCoroutine(TransitionThenLoadScene("Date", 1));
+        //SceneManager.LoadScene("Date");
 
         //transitions and pauses
 
-        usedQuestions = new List<string>();
-
-        if (nextMinigame == 1)
-            nextMinigame = 2;
+        minigameCount++;
+        if (minigameCount < 2)
+        {
+            if (nextMinigame == 1)
+                nextMinigame = 2;
+            else
+                nextMinigame = 1;
+        }
         else
-            nextMinigame = 1;
+            nextMinigame = Random.Range(1, 3);
 
         questionCap = Random.Range(1, 4);
 
         questionCount = 0;
 
-        Next();
+        if (win)
+        {
+            availableGenuine += 1;
+            tempo += 4;
+            if (dateWins < 4)
+                dateWins++;
+
+            NextDialogue("DateWin" + dateWins);
+        }
+        else
+        {
+            tempo += 12;
+            Next();
+        }
     }
 
     [YarnCommand("loadDogGame")]
@@ -301,11 +320,13 @@ public class TempoManager : MonoBehaviour
     {
         if (nextMinigame == 1)
         {
-             SceneManager.LoadScene("PouringDog");
+            StartCoroutine(TransitionThenLoadScene("PouringDog", 1));
+            //SceneManager.LoadScene("PouringDog");
         }
         else
         {
-             SceneManager.LoadScene("DogToss");
+            StartCoroutine(TransitionThenLoadScene("DogToss", 1));
+            //SceneManager.LoadScene("DogToss");
         }
     }
 
@@ -313,21 +334,36 @@ public class TempoManager : MonoBehaviour
     {
         tempo = tempo / 2;
 
-        SceneManager.LoadScene("Date");
+        StartCoroutine(TransitionThenLoadScene("Date", 1));
+        //SceneManager.LoadScene("Date");
 
         //transitions and pauses
 
-        usedQuestions = new List<string>();
-
-        if (nextMinigame == 1)
-            nextMinigame = 2;
+        minigameCount++;
+        if (minigameCount < 2)
+        {
+            if (nextMinigame == 1)
+                nextMinigame = 2;
+            else
+                nextMinigame = 1;
+        }
         else
-            nextMinigame = 1;
+            nextMinigame = Random.Range(1, 3);
 
         questionCap = Random.Range(1, 4);
 
         questionCount = 0;
 
-        Next();
+        if (dogWins < 4)
+            dogWins++;
+
+        NextDialogue("DogWin" + dogWins);
+    }
+
+    IEnumerator TransitionThenLoadScene(string sceneName, float delay)
+    {
+        transitionSpawner.VagueSpawn();
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(sceneName);
     }
 }
