@@ -27,6 +27,7 @@ public class TempoManager : MonoBehaviour
 
     int minigameCount = 0;
     int nextMinigame; //set to 1 for hose, 2 for pies.
+    int duplicateCount = 0;
 
     //Questions
     Dictionary<string, Dictionary<string, int>> questionList;
@@ -298,6 +299,8 @@ public class TempoManager : MonoBehaviour
 
         //transitions and pauses
 
+        int lastMinigame = nextMinigame;
+
         minigameCount++;
         if (minigameCount < 2)
         {
@@ -308,6 +311,21 @@ public class TempoManager : MonoBehaviour
         }
         else
             nextMinigame = Random.Range(1, 3);
+
+        if (lastMinigame == nextMinigame)
+        {
+            duplicateCount++;
+            if (duplicateCount > 2)
+            {
+                if (nextMinigame == 1)
+                    nextMinigame = 2;
+                else
+                    nextMinigame = 1;
+                duplicateCount = 0;
+            }
+        }
+        else
+            duplicateCount = 0;
 
         questionCap = Random.Range(1, 4);
 
