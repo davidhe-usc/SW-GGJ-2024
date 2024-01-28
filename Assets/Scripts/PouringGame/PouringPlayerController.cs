@@ -35,6 +35,10 @@ public class PouringHand : MonoBehaviour
     private float knockbackChance;
     [SerializeField]
     private float tempoKnockbackMod;
+    [SerializeField]
+    private BoxCollider2D activeHandRegion;
+
+    private Vector3 minHandPosition;
 
     void Start()
     {
@@ -43,6 +47,7 @@ public class PouringHand : MonoBehaviour
         tempo = gameController.tempo;
         tempoVelocityMod = tempo * tempoVelocityFactor;
         knockbackChance = ((tempo / 100f) / 2f) + 0.1f;
+        minHandPosition = activeHandRegion.bounds.min;
 
         audioPlayerLoop = GetComponent<AudioPlayCue>();
         //audioPlayerLoop.Play(true);
@@ -66,7 +71,9 @@ public class PouringHand : MonoBehaviour
             mousePos.z = 2.0f;
             Vector3 targetInWorld = Camera.main.ScreenToWorldPoint(mousePos);
             Vector3 direction = targetInWorld - handRigidbody.transform.position;
-            handRigidbody.MovePosition(handRigidbody.transform.position + (direction.normalized * handSpeed));
+            Vector3 intended = handRigidbody.transform.position + (direction.normalized * handSpeed);
+
+            handRigidbody.MovePosition(new Vector3(Mathf.Max(minHandPosition.x, intended.x), Mathf.Max(minHandPosition.y, intended.y), intended.z));
 
             if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && (Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space))) {
                 CreateBall();
