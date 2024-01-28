@@ -13,6 +13,8 @@ public class BackAndForthSlider : MonoBehaviour
     float slideAreaWidth;
     [SerializeField]
     float offset = 0;
+    [SerializeField]
+    float initialPosition;
     bool sliding = true;
     [SerializeField]
     FieldGoalChecker fieldGoalChecker;
@@ -36,7 +38,7 @@ public class BackAndForthSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && sliding == true)
         {
             //SOUND - ThrowSound.Play();
             sliding = false;
@@ -63,7 +65,7 @@ public class BackAndForthSlider : MonoBehaviour
     public void ResumeSlide()
     {
         resumeEvent.Invoke();
-        timeCounter = 0;
+        timeCounter = initialPosition;
         sliding = true;
     }
 }

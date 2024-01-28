@@ -29,9 +29,12 @@ public class PieScoreCounter : MonoBehaviour
 
     public void UpdateTextWithFlourish()
     {
-        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(particleSpawnLocation.GetComponent<RectTransform>().transform.position);
-        worldPosition.z = 0;
-        Instantiate(successParticlePrefab, worldPosition, Quaternion.identity);
+        if (successParticlePrefab != null)
+        {
+            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(particleSpawnLocation.GetComponent<RectTransform>().transform.position);
+            worldPosition.z = 0;
+            Instantiate(successParticlePrefab, worldPosition, Quaternion.identity);
+        }
         UpdateText();
     }
 }
