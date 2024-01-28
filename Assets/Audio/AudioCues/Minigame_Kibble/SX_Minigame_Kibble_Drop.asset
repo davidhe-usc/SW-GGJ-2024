@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fb9438caeba78b74da22577979579999, type: 3}
-  m_Name: SX_Dialogue_Select_Honk_01
+  m_Name: SX_Minigame_Kibble_Drop
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 6325d8598957ef445ad47e94aabc1ba2, type: 3}
+  - {fileID: 8300000, guid: c6fc7e50aa571794ea5940f3bac1e013, type: 3}
   loop: 0
   Volume: 1
   Pitch: 1
@@ -24,8 +24,8 @@ MonoBehaviour:
   PositiveVolumeVariation: 0
   lastIndex: 0
   nextIndex: 0
-  fadeInTime: 0
-  fadeOutTime: 0
+  fadeInTime: 0.1
+  fadeOutTime: 0.1
   reverbTailLength: 0
   barLength: 0
   bpm: 0
