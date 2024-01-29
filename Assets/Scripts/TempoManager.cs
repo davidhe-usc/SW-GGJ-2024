@@ -16,8 +16,8 @@ public class TempoManager : MonoBehaviour
     public static float tempo = 0f;
     private static int genuineAnswers = 0;
     private static int availableGenuine = 0;
-    private int endThreshold = 4; //number of genuine responses for the date to end.
-    private int tempoLimit = 40; //Max tempo before the date ends.
+    private int endThreshold = 40; //number of genuine responses for the date to end.
+    private int tempoLimit = 0; //Max tempo before the date ends.
 
     private int dogWins = 0;
     private int dateWins = 0;
@@ -44,8 +44,10 @@ public class TempoManager : MonoBehaviour
     int questionCount = 0; //current number of question
     int questionCap = 1; //how many questions in the current set
 
-    [SerializeField] Image GenuineBorder;
-    [SerializeField] Image TempoBorder;
+    [SerializeField] GameObject gBorder;
+    [SerializeField] GameObject tBorder;
+    Image GenuineBorder;
+    Image TempoBorder;
 
     [SerializeField]
     SimpleSpawner transitionSpawner;
@@ -173,11 +175,11 @@ public class TempoManager : MonoBehaviour
 
         questionCap = Random.Range(1, 4);
 
-        initialized = true;
+        //initialized = true;
 
-        MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
+        //MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
 
-        Next(); //Temporary instant start
+        //Next(); //Temporary instant start
     }
     void OnEnable()
     {
@@ -221,7 +223,7 @@ public class TempoManager : MonoBehaviour
         else
             TempoBorder.color = new Color(c.r, c.g, c.b, 0);
 
-        AudioTempoHandling.instance.ChangeAudioTempo(type * -1);
+        //AudioTempoHandling.instance.ChangeAudioTempo(type * -1);
         StartCoroutine(AnswerDelay(type, number));
     }
 
@@ -232,12 +234,12 @@ public class TempoManager : MonoBehaviour
         GameObject.Destroy(activeQuestion.gameObject);
 
         //AUDIO
-        if (type == 1)
+        /*if (type == 1)
             SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueGenuine);
         else if (type == 0)
             SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueNeutral);
         else
-            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueWrong);
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueWrong);*/
 
         if (number < 6) //not a honk
             dialogueRunner.StartDialogue(questionName + "Response" + number);
@@ -256,6 +258,7 @@ public class TempoManager : MonoBehaviour
 
         string[] texts = new string[4];
         int[] types = new int[4];
+        int[] numbers = new int[4];
 
         int i = 0;
         foreach (KeyValuePair<string, int> k in questionList[question])
@@ -266,17 +269,19 @@ public class TempoManager : MonoBehaviour
             {
                 texts[i-1] = k.Key;
                 types[i-1] = k.Value;
+                numbers[i - 1] = i;
             }
             else if(availableGenuine > 0) //The 6th is the genuine answer. If one is supposed to appear, randomly replace one of the other options with it.
             {
                 int r = Random.Range(0, 4);
                 texts[r] = k.Key;
                 types[r] = k.Value;
+                numbers[r] = i;
                 StartCoroutine(FadeImage(1, GenuineBorder));
             }
             i++;
         }
-        activeQuestion.SetAnswerText(texts, types);
+        activeQuestion.SetAnswerText(texts, types, numbers);
 
         StartCoroutine(FadeGroup(1, activeQuestion.GetComponent<CanvasGroup>()));
     }
@@ -304,7 +309,8 @@ public class TempoManager : MonoBehaviour
         {
             if(tempo>tempoLimit)
             {
-                StartCoroutine(NextDialogue("MissDog"));
+                string next = "MissDog" + Random.Range(1, 4);
+                StartCoroutine(NextDialogue(next));
             }    
             else if (nextMinigame == 1)
             {
@@ -342,8 +348,9 @@ public class TempoManager : MonoBehaviour
         {
             dialogueRunner = FindObjectOfType<DialogueRunner>();
             canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-            TempoBorder = GameObject.Find("TempoBorder").GetComponent<Image>();
-            GenuineBorder = GameObject.Find("GenuineBorder").GetComponent<Image>();
+            TempoBorder = Instantiate(tBorder, canvas.transform).GetComponent<Image>();
+            GenuineBorder = Instantiate(gBorder, canvas.transform).GetComponent<Image>();
+
 
             if (upcomingDialogue != null)
             {
@@ -355,6 +362,19 @@ public class TempoManager : MonoBehaviour
                 Debug.Log("Scene loaded, prodeeding to next");
                 StartCoroutine(NextDialogue(null));
             }
+        }
+        else if(scene.name.Equals("Date"))
+        {
+            initialized = true;
+
+            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
+
+            dialogueRunner = FindObjectOfType<DialogueRunner>();
+            canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+            TempoBorder = Instantiate(tBorder, canvas.transform).GetComponent<Image>();
+            GenuineBorder = Instantiate(gBorder, canvas.transform).GetComponent<Image>();
+
+            Next(); //Temporary instant start
         }
     }
 
@@ -391,7 +411,8 @@ public class TempoManager : MonoBehaviour
         else
             duplicateCount = 0;
 
-        questionCap = Random.Range(1, 4);
+        //questionCap = Random.Range(1, 4);
+        questionCap = 1;
 
         questionCount = 0;
 
@@ -467,6 +488,7 @@ public class TempoManager : MonoBehaviour
             nextMinigame = Random.Range(1, 3);
 
         questionCap = Random.Range(1, 4);
+        questionCap = 1;
 
         questionCount = 0;
 

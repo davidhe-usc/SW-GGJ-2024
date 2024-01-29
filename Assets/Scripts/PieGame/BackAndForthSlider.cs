@@ -52,7 +52,7 @@ public class BackAndForthSlider : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space)) && sliding == true)
         {
             //SOUND - ThrowSound.Play();
-            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieThrow);
+            //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieThrow);
 
             sliding = false;
             if (fieldGoalChecker.IsWithinSuccessBounds() == true)

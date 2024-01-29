@@ -137,12 +137,13 @@ public class Question : MonoBehaviour
         return new Vector3(r * Mathf.Cos(angle), r * Mathf.Sin(angle), 0);
     }
 
-    public void SetAnswerText(string[] texts, int[] types) //Set the answer text and whether they're a genuine, neutral, or bad response
+    public void SetAnswerText(string[] texts, int[] types, int[] numbers) //Set the answer text and whether they're a genuine, neutral, or bad response
     {
         for(int x = 0; x<answers.Length; x++)
         {
+            Debug.Log(x + ": " + texts[x]+", " + types[x]);
             answers[x].SetText(texts[x]);
-            answers[x].SetAnswerType(types[x],x+1);
+            answers[x].SetAnswerType(types[x], numbers[x]);
         }
     }
 

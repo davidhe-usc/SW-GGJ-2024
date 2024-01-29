@@ -32,7 +32,8 @@ public class MusicManager : MonoBehaviour
 
     public void ChangeMusic(AudioClipCueSO musicCue)
     {
-        StartCoroutine(ChangeMusicRoutine(musicCue));
+        if(this != null)
+            StartCoroutine(ChangeMusicRoutine(musicCue));
     }
 
     private IEnumerator ChangeMusicRoutine(AudioClipCueSO musicCue)
