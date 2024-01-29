@@ -1102,7 +1102,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 514.88, y: 157.92}
+  m_AnchoredPosition: {x: 514.88, y: 157.91998}
   m_SizeDelta: {x: 1125.75, y: 963.08}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!95 &718831210
@@ -1353,7 +1353,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 38517413}
   m_FillRect: {fileID: 2006735655}
   m_HandleRect: {fileID: 38517412}
