@@ -16,8 +16,8 @@ public class TempoManager : MonoBehaviour
     public static float tempo = 0f;
     private static int genuineAnswers = 0;
     private static int availableGenuine = 0;
-    private int endThreshold = 40; //number of genuine responses for the date to end.
-    private int tempoLimit = 0; //Max tempo before the date ends.
+    private int endThreshold = 4; //number of genuine responses for the date to end.
+    private int tempoLimit = 40; //Max tempo before the date ends.
 
     private int dogWins = 0;
     private int dateWins = 0;
