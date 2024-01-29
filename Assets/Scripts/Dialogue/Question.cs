@@ -75,17 +75,9 @@ public class Question : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) //When the player presses space, or whatever we decide in the end, select the answer closest to the top.
                 {
                     answered = true;
-                    float highest = -200f;
                     foreach (Answer a in answerList)
                     {
-                        if (a.transform.localPosition.y > highest)
-                        {
-                            highest = a.transform.localPosition.y-1;
-                        }
-                    }
-                    foreach (Answer a in answerList)
-                    {
-                        if (a.transform.localPosition.y > highest) //Testing value.
+                        if (a.transform.localPosition.y > targetHeightThreshold) //Testing value.
                         {
                             TempoManager.instance.ReceiveAnswer(a.GetAnswerType(), a.GetAnswerNumber());
                             answered = true;
