@@ -411,8 +411,8 @@ public class TempoManager : MonoBehaviour
         else
             duplicateCount = 0;
 
-        //questionCap = Random.Range(1, 4);
-        questionCap = 1;
+        questionCap = Random.Range(1, 4);
+        //questionCap = 1;
 
         questionCount = 0;
 
@@ -470,7 +470,7 @@ public class TempoManager : MonoBehaviour
 
     public void DogMinigameEnd()
     {
-        tempo = tempo / 2;
+        tempo = 0;
 
         //SceneManager.LoadScene("Date");
 
@@ -488,7 +488,7 @@ public class TempoManager : MonoBehaviour
             nextMinigame = Random.Range(1, 3);
 
         questionCap = Random.Range(1, 4);
-        questionCap = 1;
+        //questionCap = 1;
 
         questionCount = 0;
 
