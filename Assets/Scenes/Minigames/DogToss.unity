@@ -1871,7 +1871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
       propertyPath: earlyTempoFactor
-      value: -0.15
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
       propertyPath: fieldGoalChecker
