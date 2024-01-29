@@ -219,7 +219,7 @@ public class TempoManager : MonoBehaviour
 
         Color c = TempoBorder.color;
         if(tempo>0)
-            TempoBorder.color = new Color(c.r, c.g, c.b, (float)tempo/50f);
+            TempoBorder.color = new Color(c.r, c.g, c.b, ((float)tempo)/40f);
         else
             TempoBorder.color = new Color(c.r, c.g, c.b, 0);
 
