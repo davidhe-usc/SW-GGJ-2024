@@ -74,18 +74,30 @@ public class Question : MonoBehaviour
             {
                 if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) //When the player presses space, or whatever we decide in the end, select the answer closest to the top.
                 {
-                    answered = true;
-                    foreach (Answer a in answerList)
+                    bool pass = false;
+                    foreach(Answer a in answerList)
                     {
                         if (a.transform.localPosition.y > targetHeightThreshold) //Testing value.
                         {
-                            TempoManager.instance.ReceiveAnswer(a.GetAnswerType(), a.GetAnswerNumber());
-                            answered = true;
-                            a.End(1);
+                            pass = true;
                         }
-                        else
+                    }
+                    if (pass)
+                    {
+
+                        answered = true;
+                        foreach (Answer a in answerList)
                         {
-                            a.End(-1);
+                            if (a.transform.localPosition.y > targetHeightThreshold) //Testing value.
+                            {
+                                TempoManager.instance.ReceiveAnswer(a.GetAnswerType(), a.GetAnswerNumber());
+                                answered = true;
+                                a.End(1);
+                            }
+                            else
+                            {
+                                a.End(-1);
+                            }
                         }
                     }
                 }
