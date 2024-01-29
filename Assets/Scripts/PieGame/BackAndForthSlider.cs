@@ -57,11 +57,11 @@ public class BackAndForthSlider : MonoBehaviour
             sliding = false;
             if (fieldGoalChecker.IsWithinSuccessBounds() == true)
             {
-                SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieLand);
+                //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieLand);
                 succeedEvent.Invoke();
             } else
             {
-                SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieMiss);
+                //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieMiss);
                 failEvent.Invoke();
             }
         }

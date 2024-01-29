@@ -2280,6 +2280,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1169300006, guid: 2a330afd0b8a1184781338e219d4c20d, type: 3}
     - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
+      propertyPath: lateTempoFactor
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
+      propertyPath: earlyTempoFactor
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
       propertyPath: fieldGoalChecker
       value: 
       objectReference: {fileID: 725491796}
