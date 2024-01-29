@@ -351,6 +351,11 @@ public class TempoManager : MonoBehaviour
             TempoBorder = Instantiate(tBorder, canvas.transform).GetComponent<Image>();
             GenuineBorder = Instantiate(gBorder, canvas.transform).GetComponent<Image>();
 
+            Color c = TempoBorder.color;
+            if (tempo > 0)
+                TempoBorder.color = new Color(c.r, c.g, c.b, ((float)tempo) / 40f);
+            else
+                TempoBorder.color = new Color(c.r, c.g, c.b, 0);
 
             if (upcomingDialogue != null)
             {
