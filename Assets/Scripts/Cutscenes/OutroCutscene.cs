@@ -131,7 +131,9 @@ public class OutroCutscene : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
         }
-        
+
+        GameObject.Destroy(TempoManager.instance.gameObject);
+
         transitionSpawner.VagueSpawn();
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(nextSceneName);
