@@ -40,6 +40,7 @@ public class TempoManager : MonoBehaviour
     private Question activeQuestion;
 
     List<string> usedQuestions;
+    Queue<string> last3Questions;
 
     int questionCount = 0; //current number of question
     int questionCap = 1; //how many questions in the current set
@@ -170,6 +171,7 @@ public class TempoManager : MonoBehaviour
         };
 
         usedQuestions = new List<string>();
+        last3Questions = new Queue<string>();
 
         nextMinigame = Random.Range(1, 3);
 
@@ -301,7 +303,11 @@ public class TempoManager : MonoBehaviour
             do
             {
                 questionName = "Question" + Random.Range(1, 12);
-            } while (usedQuestions.Contains(questionName));
+            } while (usedQuestions.Contains(questionName) || last3Questions.Contains(questionName));
+
+            if (last3Questions.Count >= 3)
+                last3Questions.Dequeue();
+            last3Questions.Enqueue(questionName);
 
             StartCoroutine(NextDialogue(questionName));
         }
