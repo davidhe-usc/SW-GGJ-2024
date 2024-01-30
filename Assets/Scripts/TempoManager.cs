@@ -305,7 +305,7 @@ public class TempoManager : MonoBehaviour
                 questionName = "Question" + Random.Range(1, 12);
             } while (usedQuestions.Contains(questionName) || last3Questions.Contains(questionName));
 
-            if (last3Questions.Count >= 3)
+            if (last3Questions.Count >= 2)
                 last3Questions.Dequeue();
             last3Questions.Enqueue(questionName);
 
