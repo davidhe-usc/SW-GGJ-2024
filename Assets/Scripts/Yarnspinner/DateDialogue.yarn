@@ -49,7 +49,7 @@ tags:
 <<changeExpression Date Disgusted>>
 MC: I'd have to eat you. Isn't that what love is? I wouldn't want you to be eaten by a bird, so I'd take things into my own mouth.
 <<ChangeView date>>
-Date: ...
+Date: Please don't.
 <<changeExpression Date Default>>
 <<next TempoManager>>
 ===
@@ -165,7 +165,7 @@ tags:
 <<changeExpression Date Happy>>
 MC: It's alright, but thank you.
 <<ChangeView date>>
-Date: Sure thing!
+Date: Just let me know if you change your mind!
 <<changeExpression Date Default>>
 <<next TempoManager>>
 ===
@@ -259,7 +259,7 @@ tags:
 <<changeExpression Date Disgusted>>
 MC: Do you think a bath is a <wave>human soup?</wave>
 <<ChangeView date>>
-Date: Uh.
+Date: That's <i>so</i> gross.
 <<changeExpression Date Default>>
 <<next TempoManager>>
 ===
@@ -375,7 +375,7 @@ tags:
 <<changeExpression Date Displeased>>
 MC: I'm not allowed to talk about my family. That's top secret.
 <<ChangeView date>>
-Date: Oh. Uh. Alright.
+Date: Okay, I didn't have to know?
 <<changeExpression Date Default>>
 <<next TempoManager>>
 ===
@@ -399,7 +399,7 @@ tags:
 <<changeExpression Date Disgusted>>
 MC: We don't talk. I don't get invited to holidays, not since the <wave>Christmas incident.</wave> We haven't been in contact for the last <wave>seven</wave> years, haha!
 <<ChangeView date>>
-Date: Oh. Uh. Alright.
+Date: Oh, that's awkward...
 <<changeExpression Date Default>>
 <<next TempoManager>>
 ===
@@ -582,10 +582,10 @@ title: Question9Response2
 tags:
 ---
 <<ChangeView normal>>
-<<changeExpression Date Disgusted>>
+<<changeExpression Date Happy>>
 MC: <i>You begin to honk the tune of Mary Had A Little Lamb on your nose</i>
 <<ChangeView date>>
-Date: Oh.
+Date: Wow!
 <<changeExpression Date Default>>
 <<next TempoManager>>
 ===
@@ -643,7 +643,7 @@ tags:
 <<changeExpression Date Thinking>>
 MC: It has its ups and downs like any other job. Do you enjoy your job?
 <<ChangeView date>>
-Date: I suppose...
+Date: Yeah, I guess... 
 <<changeExpression Date Default>>
 <<next TempoManager>>
 ===
@@ -652,10 +652,10 @@ title: Question10Response2
 tags:
 ---
 <<ChangeView normal>>
-<<changeExpression Date Thinking>>
-MC: A job is a job at the end of the day. Do you enjoy your job?
+<<changeExpression Date Happy>>
+MC: Yeah, I have fun with it! I love my job! 
 <<ChangeView date>>
-Date: I suppose...
+Date:That's great to hear!
 <<changeExpression Date Default>>
 <<next TempoManager>>
 ===
@@ -749,7 +749,7 @@ tags:
 <<changeExpression Date Disgusted>>
 MC: No, thanks! No, thanks! No thanks no thanks no thanks!
 <<ChangeView date>>
-Date: Really?
+Date: Oh, COME on!
 <<changeExpression Date Default>>
 <<next TempoManager>>
 ===
@@ -764,6 +764,286 @@ MC: Haha, I'll swap you mine for yours!
 Date: Really?
 <<ChangeView thought>>
 MC: What a funny question!
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question12
+tags:
+---
+<<ChangeView date>>
+Date: What kind of music do you like?
+<<question TempoManager Question12>>
+===
+
+title: Question12Response1
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Thinking>>
+MC: I'm pretty fond of 'I'm A Little Teapot' -- have you heard of it?
+<<ChangeView date>>
+Date: Oh, that's a little um.
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question12Response2
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Happy>>
+MC: <i>You honk your nose to an unmistakeable tune of Ave Maria.</i>
+<<ChangeView date>>
+Date: <i>Lola claps delightedly at your performance.</i>
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question12Response3
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Disgusted>>
+MC: <i>You create a balloon animal and proceed to pop it.</i> Haha, get it? POP music?
+<<ChangeView date>>
+Date: Really?
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question12Response4
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Disgusted>>
+MC: <i>You play your mixtape for them, a combination of experimental laugh tracks, white noise filters, and nature sound remixes.</i>
+<<ChangeView date>>
+Date: Oh. That's a. Preference.
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question12Response5
+tags:
+---
+<<ChangeView genuine>>
+<<changeExpression Date Thinking>>
+MC: Lately, I've been listening to a lot of classical music -- it lets me think.
+<<ChangeView date>>
+Date: Oh, that's nice. I like classical music too!
+<<ChangeView thought>>
+MC: Maybe I should ask them for recommendations?
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question13
+tags:
+---
+<<ChangeView date>>
+Date: What's your favorite food?
+<<question TempoManager Question13>>
+===
+
+title: Question13Response1
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Thinking>>
+MC: All food tastes great! I love to eat!
+<<ChangeView date>>
+Date: Oh, come on! There has to be something you like more than the rest!
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question13Response2
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Displeased>>
+MC: I have no idea how to fill those out so I just deal with it like the rest of my problems!
+<<ChangeView date>>
+Date: Oh... that. That can't be good.
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question13Response3
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Disgusted>>
+MC: There are just so many flavo-- I mean <rainb>colors</rainb> of nail polish, how can I pick just one?
+<<ChangeView date>>
+Date: Excuse me? Did I hear you right?
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question13Response4
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Disgusted>>
+MC: I like whatever it is you like~ In fact, could I have some of that?
+<<ChangeView date>>
+Date: Uh. No, you can't.
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question13Response5
+tags:
+---
+<<ChangeView genuine>>
+<<changeExpression Date Disgusted>>
+MC: I like picking them up and pretending that they're little people and I'm a giant here to eat them--
+<<ChangeView date>>
+Date: That's... a little strange, I won't lie.
+<<ChangeView thought>>
+MC: Well not everything's going to be a hit, haha.
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question14
+tags:
+---
+<<ChangeView date>>
+Date: What's an animal I remind you of? 
+<<question TempoManager Question14>>
+===
+
+title: Question14Response1
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Disgusted>>
+MC: I think you'd have a high pitched bark and you'd walk on two legs. You'd have opposable thumbs and be able to vote.
+<<ChangeView date>>
+Date: Wow, how... creative.
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question14Response2
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Disgusted>>
+MC: <i>You begin pantomiming a giraffe. You stand up and extend your arms. You chew grass. You begin barking loudly.</i>
+<<ChangeView date>>
+Date: Oh, so this is what we're doing? What are you supposed to be? A seagull?
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question14Response3
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Disgusted>>
+MC: I think you're just like a human!
+<<ChangeView date>>
+Date: What do you think I <i>am</i>?!
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question14Response4
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Thinking>>
+MC: Um. I'm not sure? I don't think I know you well enough yet.
+<<ChangeView date>>
+Date: I guess you're right...
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question14Response5
+tags:
+---
+<<ChangeView genuine>>
+<<changeExpression Date Happy>>
+MC: Your hair and accessories and your whole vibe in general... it's giving me lion!
+<<ChangeView date>>
+Date: Oh, that's so cute! Thanks!
+<<ChangeView thought>>
+MC: I wonder what animal am I?
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question15
+tags:
+---
+<<ChangeView date>>
+Date: What vegetable would you be and why?
+<<question TempoManager Question15>>
+===
+
+title: Question15Response1
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Happy>>
+MC: Because I'm a-maize-ing!
+<<ChangeView date>>
+Date: Haha, now <i>that's</i> corny!
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question15Response2
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Happy>>
+MC: Because you made my heart skip a beet!
+<<ChangeView date>>
+Date: Oh, did it now?
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question15Response3
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Disgusted>>
+MC: Because I'm feeling saucy!
+<<ChangeView date>>
+Date: Whoa there, okay there, cowboy!
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question15Response4
+tags:
+---
+<<ChangeView normal>>
+<<changeExpression Date Happy>>
+MC: Because I yam what I yam!
+<<ChangeView date>>
+Date: Oh yeah? And you are a yam?
+<<changeExpression Date Default>>
+<<next TempoManager>>
+===
+
+title: Question15Response5
+tags:
+---
+<<ChangeView genuine>>
+<<changeExpression Date Thinking>>
+MC: Because onions have layers and I feel like we're all multi dimensional beings, you know?
+<<ChangeView date>>
+Date: I mean, it wasn't that deep but now you've got me thinking.
+<<ChangeView thought>>
+MC: Now I've got <i>me</i> thinking too!
 <<changeExpression Date Default>>
 <<next TempoManager>>
 ===

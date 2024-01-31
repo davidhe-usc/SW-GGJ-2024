@@ -137,7 +137,7 @@ public class TempoManager : MonoBehaviour
         Dictionary<string, int> q9 = new Dictionary<string, int>{
             {"What's a fun fact about you?", 0 },
             {"I'm a clown.", 0},
-            {"I can play my nose like an instrument.", -4},
+            {"I can play my nose like an instrument.", 0},
             {"I'm pretty boring.", -4},
             {"I eat my own hair.", -12},
             {"I love to travel!", 8}};
@@ -155,6 +155,34 @@ public class TempoManager : MonoBehaviour
             {"My credit is really bad.", -8},
             {"No, thanks!", -8},
             {"You're funny!", 8}};
+        Dictionary<string, int> q12 = new Dictionary<string, int>{
+            {"What kind of music do you like?", 0 },
+            {"Nursery rhymes.", 0},
+            {"<i>[Honk Your Nose]</i>", 0},
+            {"<i>[Blow A Balloon Animal]</i>", -4},
+            {"<i>[Play Your Mixtape]</i>", -12},
+            {"Classical.", 8}};
+        Dictionary<string, int> q13 = new Dictionary<string, int>{
+            {"What's your favorite food?", 0 },
+            {"I like all food.", 0},
+            {"Tax return.", -4},
+            {"Nail Polish.", -12},
+            {"Whatever you're having.", -8},
+            {"Tater tots.", 8}};
+        Dictionary<string, int> q14 = new Dictionary<string, int>{
+            {"What's an animal I remind you of?", 0 },
+            {"A weird dog.", -12},
+            {"<i>[Begin Pantomiming]</i>", -12},
+            {"Homosapiens.", -8},
+            {"I don't know.", 0},
+            {"A lion!", 8}};
+        Dictionary<string, int> q15 = new Dictionary<string, int>{
+            {"What vegetable would you be and why?", 0 },
+            {"Corn.", 0},
+            {"Beet.", 0},
+            {"Tomato.", -4},
+            {"Sweet potato.", 0},
+            {"Maybe an onion?", 8}};
 
         questionList = new Dictionary<string, Dictionary<string, int>>() {
             {"Question1", q1},
@@ -168,6 +196,10 @@ public class TempoManager : MonoBehaviour
             {"Question9", q9},
             {"Question10", q10},
             {"Question11", q11},
+            {"Question12", q12},
+            {"Question13", q13},
+            {"Question14", q14},
+            {"Question15", q15},
         };
 
         usedQuestions = new List<string>();
@@ -302,7 +334,7 @@ public class TempoManager : MonoBehaviour
 
             do
             {
-                questionName = "Question" + Random.Range(1, 12);
+                questionName = "Question" + Random.Range(1, questionList.Count);
             } while (usedQuestions.Contains(questionName) || last3Questions.Contains(questionName));
 
             if (last3Questions.Count >= 2)
