@@ -190,7 +190,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Disgust
+          m_StringArgument: Disgusted
           m_BoolArgument: 0
         m_CallState: 2
   - m_PersistentCalls:
@@ -2279,6 +2279,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 1169300006, guid: 2a330afd0b8a1184781338e219d4c20d, type: 3}
+    - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
+      propertyPath: throwKey
+      value: 323
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
+      propertyPath: altThrowKey
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
       propertyPath: lateTempoFactor
       value: -0.8

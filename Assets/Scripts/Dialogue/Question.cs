@@ -38,6 +38,9 @@ public class Question : MonoBehaviour
     [SerializeField] Image TimeBarSparks;
     float initialQuestionTime;
 
+    public KeyCode selectKey = KeyCode.Mouse0;
+    public KeyCode altSelectKey = KeyCode.Space;
+
     private void Awake()
     {
         tempo = TempoManager.tempo;
@@ -54,6 +57,10 @@ public class Question : MonoBehaviour
             answers[x].transform.localPosition = answerOrigin + PointOnCircle(Mathf.PI, radius);
             answers[x].SetAngle(Mathf.PI);
         }
+
+        ControlPrefs controlPrefs = GameObject.FindObjectOfType<ControlPrefs>();
+        selectKey = controlPrefs.GetControl("Interact");
+        altSelectKey = controlPrefs.GetControl("AltInteract");
     }
 
     // Start is called before the first frame update
@@ -72,7 +79,7 @@ public class Question : MonoBehaviour
         {
             if (answersPopulated)
             {
-                if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) //When the player presses space, or whatever we decide in the end, select the answer closest to the top.
+                if (Input.GetKeyDown(selectKey) || Input.GetKeyDown(altSelectKey)) //When the player presses space, or whatever we decide in the end, select the answer closest to the top.
                 {
                     bool pass = false;
                     foreach(Answer a in answerList)

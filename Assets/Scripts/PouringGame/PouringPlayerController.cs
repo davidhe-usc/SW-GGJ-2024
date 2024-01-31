@@ -40,6 +40,9 @@ public class PouringHand : MonoBehaviour
 
     private Vector3 minHandPosition;
 
+    public KeyCode pourKey = KeyCode.Mouse0;
+    public KeyCode altPourKey = KeyCode.Space;
+
     void Start()
     {
         gameController.m_StartGame.AddListener(EnableMovement);
@@ -75,7 +78,7 @@ public class PouringHand : MonoBehaviour
 
             handRigidbody.MovePosition(new Vector3(Mathf.Max(minHandPosition.x, intended.x), Mathf.Max(minHandPosition.y, intended.y), intended.z));
 
-            if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && (Input.GetKey(KeyCode.Mouse0) || Input.GetKey(KeyCode.Space))) {
+            if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && (Input.GetKey(pourKey) || Input.GetKey(altPourKey))) {
                 CreateBall();
                 ballCooldown = ballCooldownMax;
 

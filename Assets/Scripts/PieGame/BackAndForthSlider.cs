@@ -32,6 +32,9 @@ public class BackAndForthSlider : MonoBehaviour
     float lateTempoFactor;
     float currentSpeed;
 
+    public KeyCode throwKey = KeyCode.Mouse0;
+    public KeyCode altThrowKey = KeyCode.Space;
+
     float timeCounter = 0;
 
     [SerializeField] AudioClipCueSO sfxPieThrow, sfxPieLand, sfxPieMiss;
@@ -49,7 +52,7 @@ public class BackAndForthSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space)) && sliding == true)
+        if ((Input.GetKeyDown(throwKey) || Input.GetKeyDown(altThrowKey)) && sliding == true)
         {
             //SOUND - ThrowSound.Play();
             //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieThrow);

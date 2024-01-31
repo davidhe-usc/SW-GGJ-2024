@@ -1858,9 +1858,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1305089833, guid: 31e936c9a25260245820d29b489be979, type: 3}
     - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
+      propertyPath: throwKey
+      value: 323
+      objectReference: {fileID: 0}
+    - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
       propertyPath: sfxPieLand
       value: 
       objectReference: {fileID: 11400000, guid: 9b1e4c1b12ed8dc49aaaa398951e60d1, type: 2}
+    - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
+      propertyPath: altThrowKey
+      value: 32
+      objectReference: {fileID: 0}
     - target: {fileID: 4711803575040139924, guid: 4562c4faf0424bd4898e04462456d9cc, type: 3}
       propertyPath: sfxPieThrow
       value: 
