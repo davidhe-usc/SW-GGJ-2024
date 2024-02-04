@@ -676,11 +676,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 4955961519879315399}
   - {fileID: 7365618738766006083}
   - {fileID: 1094346007747699205}
   - {fileID: 3134558431299955378}
   - {fileID: 4389129557592415191}
-  - {fileID: 4955961519879315399}
   - {fileID: 3785129630839722193}
   - {fileID: 4792435858368669154}
   m_Father: {fileID: 0}
@@ -706,6 +706,7 @@ MonoBehaviour:
   TimeBar: {fileID: 335368030176875953}
   TimeBarFill: {fileID: 4562844196740831406}
   TimeBarSparks: {fileID: 8519585984676592786}
+  Overlay: {fileID: 5036022059594347389}
   selectKey: 323
   altSelectKey: 32
 --- !u!225 &7812559479682378257

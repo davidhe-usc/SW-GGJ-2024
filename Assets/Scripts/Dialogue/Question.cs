@@ -38,6 +38,7 @@ public class Question : MonoBehaviour
     [SerializeField] Image TimeBar;
     [SerializeField] Image TimeBarFill;
     [SerializeField] Image TimeBarSparks;
+    [SerializeField] Image Overlay;
     float initialQuestionTime;
 
     public KeyCode selectKey = KeyCode.Mouse0;
