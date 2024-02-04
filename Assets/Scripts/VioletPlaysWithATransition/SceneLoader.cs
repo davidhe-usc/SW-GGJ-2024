@@ -7,6 +7,8 @@ public class SceneLoader : MonoBehaviour
 {
     public void LoadScene(string sceneName)
     {
+        if (sceneName.Equals("Title") && TempoManager.instance != null)
+            TempoManager.instance.Reset();
         SceneManager.LoadScene(sceneName);
     }
 

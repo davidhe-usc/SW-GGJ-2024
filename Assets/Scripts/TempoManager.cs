@@ -241,7 +241,7 @@ public class TempoManager : MonoBehaviour
         }
         else //Otherwise, increase tempo by how wrong the answer was
         {
-            StartCoroutine(FadeImage(-1, GenuineBorder));
+            TempoManager.instance.StartCoroutine(FadeImage(-1, GenuineBorder));
             tempo += type * -1;
             if (secretViable && number == 2)
             {
@@ -258,7 +258,7 @@ public class TempoManager : MonoBehaviour
             TempoBorder.color = new Color(c.r, c.g, c.b, 0);
 
         //AudioTempoHandling.instance.ChangeAudioTempo(type * -1);
-        StartCoroutine(AnswerDelay(type, number));
+        TempoManager.instance.StartCoroutine(AnswerDelay(type, number));
     }
 
     IEnumerator AnswerDelay(int type, int number)
@@ -311,22 +311,22 @@ public class TempoManager : MonoBehaviour
                 texts[r] = k.Key;
                 types[r] = k.Value;
                 numbers[r] = i;
-                StartCoroutine(FadeImage(1, GenuineBorder));
+                TempoManager.instance.StartCoroutine(FadeImage(1, GenuineBorder));
             }
             i++;
         }
         activeQuestion.SetAnswerText(texts, types, numbers);
 
-        StartCoroutine(FadeGroup(1, activeQuestion.GetComponent<CanvasGroup>()));
+        TempoManager.instance.StartCoroutine(FadeGroup(1, activeQuestion.GetComponent<CanvasGroup>()));
     }
 
     [YarnCommand("next")]
     public void Next()
     {
-        StartCoroutine(FadeImage(-1, GenuineBorder));
+        TempoManager.instance.StartCoroutine(FadeImage(-1, GenuineBorder));
         if (genuineAnswers >= endThreshold)
         {
-            StartCoroutine(TransitionThenLoadScene("Outro", 1));
+            TempoManager.instance.StartCoroutine(TransitionThenLoadScene("Outro", 1));
         }
         else if (questionCount < questionCap)
         {
@@ -341,26 +341,26 @@ public class TempoManager : MonoBehaviour
                 last3Questions.Dequeue();
             last3Questions.Enqueue(questionName);
 
-            StartCoroutine(NextDialogue(questionName));
+            TempoManager.instance.StartCoroutine(NextDialogue(questionName));
         }
         else
         {
             if(tempo>tempoLimit)
             {
                 string next = "MissDog" + Random.Range(1, 4);
-                StartCoroutine(NextDialogue(next));
+                TempoManager.instance.StartCoroutine(NextDialogue(next));
             }    
             else if (nextMinigame == 1)
             {
                 int node = Random.Range(1, 4);
-                StartCoroutine(NextDialogue("PourStart" + node));
+                TempoManager.instance.StartCoroutine(NextDialogue("PourStart" + node));
                 //StartCoroutine(TransitionThenLoadScene("PouringDate", 1));
                 //SceneManager.LoadScene("PouringDate");
             }
             else
             {
                 int node = Random.Range(1, 4);
-                StartCoroutine(NextDialogue("PieStart" + node));
+                TempoManager.instance.StartCoroutine(NextDialogue("PieStart" + node));
                 //StartCoroutine(TransitionThenLoadScene("PieToss", 1));
                 //SceneManager.LoadScene("PieToss");
             }
@@ -398,17 +398,19 @@ public class TempoManager : MonoBehaviour
             if (upcomingDialogue != null)
             {
                 Debug.Log("Scene loaded, starting node: " + upcomingDialogue);
-                StartCoroutine(NextDialogue(upcomingDialogue));
+                TempoManager.instance.StartCoroutine(NextDialogue(upcomingDialogue));
             }
             else
             {
                 Debug.Log("Scene loaded, prodeeding to next");
-                StartCoroutine(NextDialogue(null));
+                TempoManager.instance.StartCoroutine(NextDialogue(null));
             }
         }
         else if(scene.name.Equals("Date"))
         {
             initialized = true;
+
+            instance = this;
 
             MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
 
@@ -478,7 +480,7 @@ public class TempoManager : MonoBehaviour
 
         MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
 
-        StartCoroutine(TransitionThenLoadScene("Date", 1));
+        TempoManager.instance.StartCoroutine(TransitionThenLoadScene("Date", 1));
     }
 
     [YarnCommand("loadMiniGame")]
@@ -487,12 +489,12 @@ public class TempoManager : MonoBehaviour
         if (nextMinigame == 1)
         {
             MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePouring);
-            StartCoroutine(TransitionThenLoadScene("PouringDate", 1));
+            TempoManager.instance.StartCoroutine(TransitionThenLoadScene("PouringDate", 1));
         }
         else
         {
             MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePie);
-            StartCoroutine(TransitionThenLoadScene("PieToss", 1));
+            TempoManager.instance.StartCoroutine(TransitionThenLoadScene("PieToss", 1));
         }
     }
 
@@ -501,12 +503,12 @@ public class TempoManager : MonoBehaviour
     {
         if (nextMinigame == 1)
         {
-            StartCoroutine(TransitionThenLoadScene("PouringDog", 1));
+            TempoManager.instance.StartCoroutine(TransitionThenLoadScene("PouringDog", 1));
             //SceneManager.LoadScene("PouringDog");
         }
         else
         {
-            StartCoroutine(TransitionThenLoadScene("DogToss", 1));
+            TempoManager.instance.StartCoroutine(TransitionThenLoadScene("DogToss", 1));
             //SceneManager.LoadScene("DogToss");
         }
     }
@@ -540,7 +542,7 @@ public class TempoManager : MonoBehaviour
 
         upcomingDialogue = "DogWin" + dogWins;
 
-        StartCoroutine(TransitionThenLoadScene("Date", 1));
+        TempoManager.instance.StartCoroutine(TransitionThenLoadScene("Date", 1));
     }
 
     IEnumerator TransitionThenLoadScene(string sceneName, float delay)
@@ -580,5 +582,29 @@ public class TempoManager : MonoBehaviour
                 c.alpha -= Time.deltaTime * 4f;
                 yield return null;
             }
+    }
+
+    public void Reset()
+    {
+        tempo = 0;
+        genuineAnswers = 0;
+        availableGenuine = 0;
+        dogWins = 0;
+        dateWins = 0;
+        minigameCount = 0;
+        duplicateCount = 0;
+        questionCount = 0;
+        questionCap = 1;
+
+        initialized = false;
+        secret = false;
+        secretViable = false;
+
+        usedQuestions = new List<string>();
+        last3Questions = new Queue<string>();
+
+        nextMinigame = Random.Range(1, 3);
+
+        questionCap = Random.Range(1, 4);
     }
 }
