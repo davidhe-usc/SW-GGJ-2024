@@ -4,6 +4,8 @@ using UnityEngine;
 using Yarn.Unity;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class Question : MonoBehaviour
 {
@@ -59,8 +61,11 @@ public class Question : MonoBehaviour
         }
 
         ControlPrefs controlPrefs = GameObject.FindObjectOfType<ControlPrefs>();
-        selectKey = controlPrefs.GetControl("Interact");
-        altSelectKey = controlPrefs.GetControl("AltInteract");
+        if (controlPrefs != null)
+        {
+            selectKey = controlPrefs.GetControl("Interact");
+            altSelectKey = controlPrefs.GetControl("AltInteract");
+        }
     }
 
     // Start is called before the first frame update
@@ -79,7 +84,7 @@ public class Question : MonoBehaviour
         {
             if (answersPopulated)
             {
-                if (Input.GetKeyDown(selectKey) || Input.GetKeyDown(altSelectKey)) //When the player presses space, or whatever we decide in the end, select the answer closest to the top.
+                if ((Input.GetKeyDown(selectKey) || Input.GetKeyDown(altSelectKey)) && !EventSystem.current.IsPointerOverGameObject()) //When the player presses space, or whatever we decide in the end, select the answer closest to the top.
                 {
                     bool pass = false;
                     foreach(Answer a in answerList)

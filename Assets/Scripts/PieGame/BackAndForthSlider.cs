@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class BackAndForthSlider : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class BackAndForthSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(throwKey) || Input.GetKeyDown(altThrowKey)) && sliding == true)
+        if ((Input.GetKeyDown(throwKey) || Input.GetKeyDown(altThrowKey)) && sliding == true && !EventSystem.current.IsPointerOverGameObject())
         {
             //SOUND - ThrowSound.Play();
             //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieThrow);

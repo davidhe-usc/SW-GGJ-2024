@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PouringHand : MonoBehaviour
 {
@@ -78,7 +79,7 @@ public class PouringHand : MonoBehaviour
 
             handRigidbody.MovePosition(new Vector3(Mathf.Max(minHandPosition.x, intended.x), Mathf.Max(minHandPosition.y, intended.y), intended.z));
 
-            if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && (Input.GetKey(pourKey) || Input.GetKey(altPourKey))) {
+            if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && (Input.GetKey(pourKey) || Input.GetKey(altPourKey) && !EventSystem.current.IsPointerOverGameObject())) {
                 CreateBall();
                 ballCooldown = ballCooldownMax;
 
