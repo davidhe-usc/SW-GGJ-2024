@@ -1274,6 +1274,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7757757766231053605, guid: 683b9bbbe86f14706a5c594e16b13f3e, type: 3}
+      propertyPath: pourControls
+      value: 
+      objectReference: {fileID: 1385372659}
     - target: {fileID: 9177975946832781556, guid: 683b9bbbe86f14706a5c594e16b13f3e, type: 3}
       propertyPath: m_BlocksRaycasts
       value: 0

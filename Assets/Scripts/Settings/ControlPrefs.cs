@@ -13,10 +13,15 @@ public class ControlPrefs : MonoBehaviour
     BackAndForthSlider tossControls;
     [SerializeField]
     PouringHand pourControls;
+    [SerializeField]
+    DialogContinueKeyActivator[] continueButtons;
+    [SerializeField]
+    string listeningReadoutPhrase;
 
     private void Start()
     {
         CheckFirstLoad();
+        MapControlsFromSave();
     }
 
     private void Update()
@@ -55,6 +60,15 @@ public class ControlPrefs : MonoBehaviour
             pourControls.pourKey = GetControl("Interact");
             pourControls.altPourKey = GetControl("AltInteract");
         }
+        if (continueButtons.Length > 0)
+        {
+            for (int i = 0; i < continueButtons.Length; i++)
+            {
+                continueButtons[i].continueKey = GetControl("Interact");
+                continueButtons[i].altContinueKey = GetControl("AltInteract");
+            }
+        }
+
         //Insert other scripts to change here.
         //Question.cs has to use the GetControl function since multiple questions get created, so we can't just point to one.
 
@@ -62,7 +76,11 @@ public class ControlPrefs : MonoBehaviour
         {
             readouts[0].text = GetControl("Interact").ToString();
             readouts[1].text = GetControl("AltInteract").ToString();
+            ClarifyReadout(0);
+            ClarifyReadout(1);
         }
+
+        
     }
 
     void CheckFirstLoad()
@@ -93,5 +111,25 @@ public class ControlPrefs : MonoBehaviour
     {
         string keyName = PlayerPrefs.GetString("Control" + controlName);
         return (KeyCode)System.Enum.Parse(typeof(KeyCode), keyName);
+    }
+
+    public void ShowReadoutReady(int readoutIndex)
+    {
+        readouts[readoutIndex].text = listeningReadoutPhrase;
+    }
+
+    public void ClarifyReadout(int readoutIndex)
+    {
+        if (readouts[readoutIndex].text == "Mouse0")
+        {
+            readouts[readoutIndex].text = "Left Click";
+        } else if (readouts[readoutIndex].text == "Mouse1")
+        {
+            readouts[readoutIndex].text = "Right Click";
+        }
+        else if(readouts[readoutIndex].text == "Mouse2")
+        {
+            readouts[readoutIndex].text = "Middle Click";
+        }
     }
 }

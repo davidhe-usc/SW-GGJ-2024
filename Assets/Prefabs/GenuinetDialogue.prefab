@@ -599,6 +599,7 @@ GameObject:
   - component: {fileID: 4202789294396610198}
   - component: {fileID: 2043313892081177217}
   - component: {fileID: 1015894131826261671}
+  - component: {fileID: 2452282954595914964}
   m_Layer: 5
   m_Name: Continue Image
   m_TagString: Untagged
@@ -720,6 +721,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2452282954595914964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6473151874222359359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a16bcc3fd77d741bd15203f8c0d49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  continueKey: 323
+  altContinueKey: 323
+  continueButton: {fileID: 1015894131826261671}
 --- !u!1 &7298075820745641720
 GameObject:
   m_ObjectHideFlags: 0
