@@ -25,14 +25,14 @@ public class SettingsMenu : MonoBehaviour
     {
         if (!pause)
         {
-            Debug.Log("Pause");
+            //Debug.Log("Pause");
             pause = true;
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
         }
         else
         {
-            Debug.Log("Unpause");
+            //Debug.Log("Unpause");
             pause = false;
             pauseMenu.SetActive(false);
             Time.timeScale = 1;
