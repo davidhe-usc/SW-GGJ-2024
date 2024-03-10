@@ -83,10 +83,7 @@ public class MusicManager : MonoBehaviour
 
     public void ResetTempo()
     {
-        float pitchDifference = Mathf.Abs(1 - musicSource.pitch);
-        ChangeAudioTempo(-pitchDifference);
-
+        StartCoroutine(AudioUtility.AudioSourcePitchSlideReset(musicSource, pitchSlideDuration));
         AmbienceManager.instance.CheckAmbienceIntensity((int)TempoManager.tempo);
-        print("RESET TEMPO");
     }
 }

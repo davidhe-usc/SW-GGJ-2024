@@ -517,15 +517,18 @@ public class TempoManager : MonoBehaviour
     [YarnCommand("loadDogGame")]
     public void LoadDogGame()
     {
+        MusicManager.instance.ResetTempo();
+        AmbienceManager.instance.StopAmbience();
+
         if (nextMinigame == 1)
         {
-            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePouring);
+            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueIntro);
             TempoManager.instance.StartCoroutine(TransitionThenLoadScene("PouringDog", 1));
             //SceneManager.LoadScene("PouringDog");
         }
         else
         {
-            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePie);
+            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueIntro);
             TempoManager.instance.StartCoroutine(TransitionThenLoadScene("DogToss", 1));
             //SceneManager.LoadScene("DogToss");
         }

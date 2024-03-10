@@ -142,6 +142,21 @@ public static class AudioUtility
         }
         yield break;
     }
+
+    public static IEnumerator AudioSourcePitchSlideReset(AudioSource audioSource, float duration)
+    {
+        float currentTime = 0;
+        float startPitch = audioSource.pitch;
+        float targetPitch = 1;
+
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            audioSource.pitch = Mathf.Lerp(startPitch, targetPitch, currentTime / duration);
+            yield return null;
+        }
+        yield break;
+    }
     #endregion
 
     #region Play One Shots
