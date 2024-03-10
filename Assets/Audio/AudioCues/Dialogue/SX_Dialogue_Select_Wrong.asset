@@ -15,7 +15,7 @@ MonoBehaviour:
   audioClips:
   - {fileID: 8300000, guid: b183baa7a6667684ab0d8297bece0f7a, type: 3}
   loop: 0
-  Volume: 0.3
+  Volume: 0.2
   Pitch: 1
   sequenceMode: 2
   NegativePitchVariation: 0

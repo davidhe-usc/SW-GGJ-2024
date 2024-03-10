@@ -91,9 +91,11 @@ public class PouringGame : MonoBehaviour
         gameState = GameState.Result;
         if (GetSuccess() || isDogVersion) {
             m_WinGame.Invoke();
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxMinigameWin);
         }
         else {
             m_LoseGame.Invoke();
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxMinigameLose);
         }
     }
 

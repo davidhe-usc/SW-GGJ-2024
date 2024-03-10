@@ -12,29 +12,9 @@ public class AudioTempoHandling : MonoBehaviour
 
     void Awake()
     {
-        AudioTempoHandling[] tms = FindObjectsOfType<AudioTempoHandling>();
-
-        if (tms.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-
-        DontDestroyOnLoad(this.gameObject);
         instance = this;
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    
+ 
     public void ChangeAudioTempo(float tempoIncrement)
     {
         int tempoDivider = 90;

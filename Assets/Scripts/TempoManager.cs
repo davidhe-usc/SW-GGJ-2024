@@ -228,8 +228,6 @@ public class TempoManager : MonoBehaviour
 
     public void ReceiveAnswer(int type, int number)
     {
-        //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueSelect);
-
         if (type >= 1) //Genuine answer
         {
             tempo -= type;
@@ -238,11 +236,13 @@ public class TempoManager : MonoBehaviour
             genuineAnswers += 1;
             availableGenuine -= 1;
             usedQuestions.Add(questionName);
+            MusicManager.instance.ChangeAudioTempo(-type);
         }
         else //Otherwise, increase tempo by how wrong the answer was
         {
             TempoManager.instance.StartCoroutine(FadeImage(-1, GenuineBorder));
             tempo += type * -1;
+            MusicManager.instance.ChangeAudioTempo(type * -1);
             if (secretViable && number == 2)
             {
                 Debug.Log("???");
@@ -268,12 +268,12 @@ public class TempoManager : MonoBehaviour
         GameObject.Destroy(activeQuestion.gameObject);
 
         //AUDIO
-        /*if (type == 1)
+        if (type >= 1)
             SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueGenuine);
         else if (type == 0)
             SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueNeutral);
         else
-            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueWrong);*/
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueWrong);
 
         if (number < 6) //not a honk
             dialogueRunner.StartDialogue(questionName + "Response" + number);
@@ -412,14 +412,27 @@ public class TempoManager : MonoBehaviour
 
             instance = this;
 
-            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
-
             dialogueRunner = FindObjectOfType<DialogueRunner>();
             canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
             TempoBorder = Instantiate(tBorder, canvas.transform).GetComponent<Image>();
             GenuineBorder = Instantiate(gBorder, canvas.transform).GetComponent<Image>();
 
+            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
+            AmbienceManager.instance.StartAmbience();
+
             Next(); //Temporary instant start
+        }
+        else if (scene.name.Equals("Outro") && MusicManager.instance != null)
+        {
+            AmbienceManager.instance.StopAmbience();
+            MusicManager.instance.ResetTempo();
+            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueEnding);
+        }
+        else if (scene.name.Equals("Title"))
+        {
+            AmbienceManager.instance.StopAmbience();
+            MusicManager.instance.ResetTempo();
+            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMainMenu);
         }
     }
 
@@ -464,17 +477,20 @@ public class TempoManager : MonoBehaviour
         if (win)
         {
             availableGenuine += 1;
-            tempo += 4;
+             tempo += 4;
+            MusicManager.instance.ChangeAudioTempo(4);
+
             if (dateWins < 4)
                 dateWins++;
 
-            //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxMinigameWin);
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxMinigameWin);
             upcomingDialogue = "DateWin" + dateWins;
         }
         else
         {
-            //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxMinigameLose);
+            SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxMinigameLose);
             tempo += 12;
+            MusicManager.instance.ChangeAudioTempo(12);
             upcomingDialogue = null;
         }
 
@@ -503,11 +519,13 @@ public class TempoManager : MonoBehaviour
     {
         if (nextMinigame == 1)
         {
+            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePouring);
             TempoManager.instance.StartCoroutine(TransitionThenLoadScene("PouringDog", 1));
             //SceneManager.LoadScene("PouringDog");
         }
         else
         {
+            MusicManager.instance.ChangeMusic(MusicManager.instance.musicCuePie);
             TempoManager.instance.StartCoroutine(TransitionThenLoadScene("DogToss", 1));
             //SceneManager.LoadScene("DogToss");
         }
@@ -541,6 +559,8 @@ public class TempoManager : MonoBehaviour
             dogWins++;
 
         upcomingDialogue = "DogWin" + dogWins;
+
+        MusicManager.instance.ChangeMusic(MusicManager.instance.musicCueMain);
 
         TempoManager.instance.StartCoroutine(TransitionThenLoadScene("Date", 1));
     }
@@ -606,5 +626,7 @@ public class TempoManager : MonoBehaviour
         nextMinigame = Random.Range(1, 3);
 
         questionCap = Random.Range(1, 4);
+
+        MusicManager.instance.ResetTempo();
     }
 }

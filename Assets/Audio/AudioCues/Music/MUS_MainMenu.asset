@@ -25,7 +25,7 @@ MonoBehaviour:
   lastIndex: 0
   nextIndex: 0
   fadeInTime: 0.1
-  fadeOutTime: 0.1
+  fadeOutTime: 1
   reverbTailLength: 0
   barLength: 0
   bpm: 0

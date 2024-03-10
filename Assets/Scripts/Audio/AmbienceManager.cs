@@ -7,34 +7,19 @@ public class AmbienceManager : MonoBehaviour
     [SerializeField] private AudioPlayCue ambA, ambB, ambC, ambD;
 
     private int tempoThresholdB = 10;
-    private int tempoThresholdC = 20;
-    private int tempoThresholdD = 30;
+    private int tempoThresholdC = 25;
+    private int tempoThresholdD = 40;
 
     public static AmbienceManager instance;
 
     private void Awake()
     {
-        AmbienceManager[] tms = FindObjectsOfType<AmbienceManager>();
+        if(instance != null)
+            Destroy(gameObject);
+        else
+            instance = this;  
 
-        if (tms.Length > 1)
-        {
-            Destroy(this.gameObject);
-        }
-
-        DontDestroyOnLoad(this.gameObject);
-        instance = this;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        DontDestroyOnLoad(gameObject);
     }
 
     public void CheckAmbienceIntensity (int tempo)
@@ -53,5 +38,18 @@ public class AmbienceManager : MonoBehaviour
             ambB.Play(true);
         else
             ambB.Stop(true);
+    }
+
+    public void StopAmbience()
+    {
+        ambA.Stop(false);
+        ambB.Stop(false);
+        ambC.Stop(false);
+        ambD.Stop(false);
+    }
+
+    public void StartAmbience()
+    {
+        ambA.Play(true);
     }
 }

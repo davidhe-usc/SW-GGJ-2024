@@ -85,6 +85,8 @@ public class Question : MonoBehaviour
         {
             if (answersPopulated)
             {
+                MusicManager.instance.StartDrumRoll();
+
                 if ((Input.GetKeyDown(selectKey) || Input.GetKeyDown(altSelectKey)) && !EventSystem.current.IsPointerOverGameObject()) //When the player presses space, or whatever we decide in the end, select the answer closest to the top.
                 {
                     bool pass = false;
@@ -97,7 +99,7 @@ public class Question : MonoBehaviour
                     }
                     if (pass)
                     {
-
+                        MusicManager.instance.AnswerSelected();
                         answered = true;
                         foreach (Answer a in answerList)
                         {
@@ -118,7 +120,8 @@ public class Question : MonoBehaviour
                 questionTimer -= Time.deltaTime;
                 if(questionTimer<=0)
                 {
-                    //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueHonk); //honk
+                    SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxDialogueHonk); //honk
+                    MusicManager.instance.StopDrumRoll();
                     questionTimer = 0;
                     TempoManager.instance.ReceiveAnswer(-12, 6); //Very bad answer
                     answered = true;

@@ -39,6 +39,7 @@ public class BackAndForthSlider : MonoBehaviour
     float timeCounter = 0;
 
     [SerializeField] AudioClipCueSO sfxPieThrow, sfxPieLand, sfxPieMiss;
+    [SerializeField] AudioPlayOneShot aSource;
 
     // Start is called before the first frame update
     void Start()
@@ -56,16 +57,16 @@ public class BackAndForthSlider : MonoBehaviour
         if ((Input.GetKeyDown(throwKey) || Input.GetKeyDown(altThrowKey)) && sliding == true && !EventSystem.current.IsPointerOverGameObject())
         {
             //SOUND - ThrowSound.Play();
-            //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieThrow);
+            aSource.Play(sfxPieThrow);
 
             sliding = false;
             if (fieldGoalChecker.IsWithinSuccessBounds() == true)
             {
-                //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieLand);
+                aSource.Play(sfxPieLand);
                 succeedEvent.Invoke();
             } else
             {
-                //SFXOneShots.instance.PlayOneShot(SFXOneShots.instance.sfxPieMiss);
+                aSource.Play(sfxPieMiss);
                 failEvent.Invoke();
             }
         }

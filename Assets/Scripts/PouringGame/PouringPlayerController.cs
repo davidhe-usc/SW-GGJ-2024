@@ -54,7 +54,6 @@ public class PouringHand : MonoBehaviour
         minHandPosition = activeHandRegion.bounds.min;
 
         audioPlayerLoop = GetComponent<AudioPlayCue>();
-        //audioPlayerLoop.Play(true);
     }
 
     void EnableMovement() {
@@ -82,10 +81,15 @@ public class PouringHand : MonoBehaviour
             if (ballCooldown == 0 && gameController.numBalls < gameController.maxBalls && (Input.GetKey(pourKey) || Input.GetKey(altPourKey)) /*&& !EventSystem.current.IsPointerOverGameObject()*/)     {
                 CreateBall();
                 ballCooldown = ballCooldownMax;
+            }
 
-                if(canPlayAudio == true)
+            ballCooldown = Mathf.Max(ballCooldown - Time.deltaTime, 0);
+
+            //Hose audio
+            if(gameController.numBalls < gameController.maxBalls && (Input.GetKey(pourKey) || Input.GetKey(altPourKey))){
+                if (canPlayAudio == true)
                 {
-                    if(audioPlayerLoop!=null)
+                    if (audioPlayerLoop != null)
                         audioPlayerLoop.Play(false);
                     canPlayAudio = false;
                 }
@@ -96,7 +100,6 @@ public class PouringHand : MonoBehaviour
                     audioPlayerLoop.Stop(false);
                 canPlayAudio = true;
             }
-            ballCooldown = Mathf.Max(ballCooldown - Time.deltaTime, 0);
         }
     }
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SX_Minigame_Pie_Miss
   m_EditorClassIdentifier: 
   audioClips:
-  - {fileID: 8300000, guid: 26070435a6e385f44ae55e2188d0d735, type: 3}
+  - {fileID: 8300000, guid: 964332c4bb724a14c977152a049d454d, type: 3}
   loop: 0
   Volume: 1
   Pitch: 1
