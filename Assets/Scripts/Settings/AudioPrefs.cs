@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class AudioPrefs : MonoBehaviour
 {
     [SerializeField]
     Slider volumeSlider;
+    [SerializeField]
+    AudioMixer mixer;
 
     private void Start()
     {
@@ -57,6 +60,7 @@ public class AudioPrefs : MonoBehaviour
 
     public void UpdateGameVolume()
     {
-        //Do whatever we need to do with the saved volume number!
+        float volClamped = Mathf.Clamp(PlayerPrefs.GetFloat("MasterVolume"), 0.0001f, 1f);
+        mixer.SetFloat("MasterVolume", Mathf.Log10(volClamped) * 20);
     }
 }
